@@ -1,14 +1,14 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from './Shared/Header/Header';
 
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Hello world this assignment 11 WOW</h1>
-      <h1>this is md shakil</h1>
+      <Header></Header>
     </div>
   );
 }

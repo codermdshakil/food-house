@@ -1,0 +1,22 @@
+.header-section{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.title{
+    color: #ff3030;
+    font-weight: bold;
+}
+
+a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: .3s ease-in-out;
+}
+
+a:hover{
+    color:#ff3030;
+}
+.burger{
+    color: #ff3030;
+}
