@@ -1,14 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 import singupLogo from '../../images/signup.png';
 import './SignUp.css';
 import flower from '../../images/flower.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 
 const SignUp = () => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [firstError, setFirstError] = useState('');
+    const [secoundError, setSecoudError] = useState('');
+
+    console.log(firstError, secoundError)
+
+    console.log(name, email, password, confirmPassword);
+
+
+    // handle user sign up from 
+    const handleUserSignUp = e => {
+        e.preventDefault();
+        
+
+        if(password !== confirmPassword){
+            setFirstError('Your two password is not match!');
+            setSecoudError('');
+            return;
+        }
+
+        if(confirmPassword.length  < 6){
+            setSecoudError('You password should 6 charecter!');
+            setFirstError('');
+            return;
+        }
+
+        if(password === confirmPassword){
+            console.log('this is true')
+            setFirstError('');
+            setSecoudError('');
+            toast(`${name} SignUp successfully!`)
+        }
+        
+        e.target.reset();
+    }
+
+    // handle userName 
+    const hanleUserName = e => {
+        setName(e.target.value)
+    }
+
+    // hanlde user email 
+    const handleUserEmail = e => {
+        setEmail(e.target.value)
+    }
+
+    // handle user password 
+    const handleUserPassword = e => {
+        setPassword(e.target.value)
+    }
+
+    // handle user password 
+    const handleUserConfirmPassword = e => {
+        setConfirmPassword(e.target.value)
+    }
+
+
     return (
         <div className='mt-5 pt-5'>
             <div className="container">
@@ -21,11 +83,13 @@ const SignUp = () => {
                             <h5 className='welcome-message'>welcome  <img src={flower} className="img-fluid mb-2" alt="" /></h5>
                             <h4>Registration In <span className='website-name'> FOOD</span>HOUSE</h4>
                             <div className="signup-form-box">
-                                <form>
-                                    <input type="text" name="name" placeholder='Name' required /><br />
-                                    <input type="email" name='email' placeholder='E-mail' required /><br />
-                                    <input type="password" name='password' placeholder='Password' required /> <br />
-                                    <input type="password" name='confirmPassword' placeholder='Confirm Password' required /><br />
+                                <form onSubmit={handleUserSignUp}>
+                                    <input onBlur={hanleUserName} type="text" name="name" placeholder='Name' required /><br />
+                                    <input onBlur={handleUserEmail} type="email" name='email' placeholder='E-mail' required /><br />
+                                    <input onBlur={handleUserPassword} type="password" name='password' placeholder='Password' required /> <br />
+                                    <input onBlur={handleUserConfirmPassword} type="password" name='confirmPassword' placeholder='Confirm Password' required /><br />
+                                    <p className='error-style'>{firstError}</p>
+                                    <p className='error-style'>{secoundError}</p>
                                     <button type="submit" className='signUp-btn'>Sign Up <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>

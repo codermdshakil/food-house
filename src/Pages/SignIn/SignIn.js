@@ -4,9 +4,9 @@ import signInLogo from '../../images/login.png';
 import flower from '../../images/flower.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import './SignIn.css';
 import googleLogo from '../../images/google.png';
 import githubLogo from '../../images/GitHub.png';
+import './SignIn.css';
 
 
 
@@ -23,7 +23,7 @@ const SignIn = () => {
                                 <form>
                                     <input type="email" name='email' placeholder='E-mail' required /><br />
                                     <input type="password" name='password' placeholder='Password' required /> <br />
-                                    <p className='text-start px-2 d-flex align-items-center'>Forget password ? <button class="btn btn-link text-decoration-none" style={{color:'#4092c1', cursor:'pointer'}} > Reset  Password</button></p>
+                                    <p  style={{ color: "gray" }} className='text-start px-2 d-flex align-items-center'>Forget password ? <button className="btn btn-link text-decoration-none" style={{color:'#4092c1', cursor:'pointer'}} > Reset  Password</button></p>
                                     <button type="submit" className='signUp-btn' >Sign In <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>

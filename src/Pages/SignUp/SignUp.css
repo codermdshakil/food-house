@@ -13,7 +13,7 @@
     background-position: top center;
     background-size: cover;
     padding: 30px 10px;
-    height: 500px;
+    height: 550px;
     border-radius: 20px;
     margin-bottom: 50px;
 }
@@ -43,9 +43,9 @@
 }
 
 .signUp-btn {
-    background-color: #ff3030;
+    background-color: #4092c1;
     color: #fff;
-    border: 1px solid #ff3030;
+    border: 1px solid #4092c1;
     padding: 12px;
     width: 100%;
     border-radius: 15px;
@@ -55,8 +55,8 @@
 }
 
 .signUp-btn:hover {
-    background-color: #4092c1;
-    border: 1px solid #4092c1;
+    background-color: #ff3030;
+    border: 1px solid #ff3030;
     color: #FFF;
 }
 
@@ -64,6 +64,11 @@
     color: #4092c1;
 }
 
+.error-style{
+    background-color:#ffc0cb;
+    color: #cb3439;
+    border-radius: 4px;
+}
 /* media queries  */
 
 /* medium device */

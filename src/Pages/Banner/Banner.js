@@ -19,7 +19,6 @@ const Banner = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-                
                 <SwiperSlide>
                     <div className="item-2-container">
                         <div className="container">
