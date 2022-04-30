@@ -39,14 +39,17 @@ const Banner = () => {
                     <div className="item-2-container">
                         <div className="container">
                             <div className='row'>
-                                <div className="col-lg-6 col-md-6">
-
+                                <div className="col-lg-6 col-md-6 ">
+                                    {/* empty */}
                                 </div>
-                                <div className="col-lg-6">
-                                    <div className='text-end'>
-                                        <p className='feaured-title'>Feature Product</p>
-                                        <h2>Most Nutrient-Dense Vegetables</h2>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, illum nesciunt! Recusandae est facilis eius aut labore in neque facere ad odit, iste aperiam et tempore deserunt doloribus consequatur eum!</p>
+                                <div className="col-lg-6 col-md-6 col-11">
+                                    <div className='text-end '>
+                                        <div className="product-banner2-title">
+                                            <p className='feaured-title'>Feature Product</p>
+                                            <h2>Most  <span className='highlight'> Nutrient </span> lively  Vegetables </h2>
+                                            <p>Check the characteristic signs of freshness such as bright, lively color in the vegetable and look to see if the vegetable is crisp and free of soft spots.</p>
+                                            <button className='banner-btn'>Juicy Apple  </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

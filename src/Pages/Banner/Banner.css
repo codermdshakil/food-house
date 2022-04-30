@@ -74,7 +74,12 @@
     background-position: top center;
 
 }
-
+.product-banner2-title{
+    margin-top: 100px;
+}
+.product-banner2-title h2{
+    font-size: 52px;
+}
 /* media queries  */
 
 /* medium device  */
@@ -94,6 +99,14 @@
     .banner-btn{
         padding: 10px 20px;
     }
+
+    /* secound item start here  */
+    .product-banner2-title {
+        margin-top: 135px;
+    }
+    .product-banner2-title h2{
+        font-size: 38px;
+    }
     
 }
 /* medium device  */
@@ -107,5 +120,7 @@
     .banner-btn{
         padding: 8px 18px;
     }
+    /* secound item start here  */
+
     
 }
