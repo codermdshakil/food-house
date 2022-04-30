@@ -7,9 +7,11 @@ import "swiper/css/navigation";
 import './Banner.css';
 import banner1 from '../../images/banner/banner-1.png';
 
+
+
 const Banner = () => {
     return (
-        <div>
+        <>
             <Swiper
                 pagination={{
                     type: "fraction",
@@ -19,15 +21,15 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className="first-item-container">
+                    <div className="item-container">
                         <div className="container">
                             <div className='row d-flex align-items-center'>
                                 <div className="col-lg-6 col-md-6">
-                                    <div className='first-item-title'>
+                                    <div className='product-banner-title'>
                                         <p className='feaured-title'>Feature Product</p>
                                         <h2>May <span className='highlight'>protect</span> your brain as you age</h2>
                                         <p>Contains beneficial plant compounds. Apples are rich in plant compounds, particularly polyphenols. Supports hydration. Apple juice is 88% water and tastes good.</p>
-                                        <button className='juicy-apple-btn'>Juicy Apple</button>
+                                        <button className='banner-btn'>Juicy Apple</button>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-11  m-auto order-first order-md-last mb-5">
@@ -39,28 +41,10 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione placeat illum velit deleniti dolorem laborum, quos nam quaerat sint dolores.</p>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt qui consequuntur, perspiciatis nostrum voluptas nobis facere error nemo debitis ipsum eos laboriosam dolorem nisi impedit beatae. Beatae impedit cumque ipsum!</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione placeat illum velit deleniti dolorem laborum, quos nam quaerat sint dolores.</p>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt qui consequuntur, perspiciatis nostrum voluptas nobis facere error nemo debitis ipsum eos laboriosam dolorem nisi impedit beatae. Beatae impedit cumque ipsum!</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                <SwiperSlide>Slide 2</SwiperSlide>
+                <SwiperSlide>Slide 3</SwiperSlide>
             </Swiper>
-        </div>
+        </>
     );
 };
 
