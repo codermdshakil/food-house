@@ -15,6 +15,7 @@
     padding: 30px 10px;
     height: 500px;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .signup-form-box {
@@ -41,7 +42,7 @@
     box-shadow: rgba(149, 157, 165, 0.133) 0px 8px 24px;
 }
 
-.signup-form-box button {
+.signUp-btn {
     background-color: #ff3030;
     color: #fff;
     border: 1px solid #ff3030;
@@ -53,7 +54,7 @@
     transition: all .3s ease-in;
 }
 
-.signup-form-box button:hover {
+.signUp-btn:hover {
     background-color: #4092c1;
     border: 1px solid #4092c1;
     color: #FFF;

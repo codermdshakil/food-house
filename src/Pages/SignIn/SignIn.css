@@ -1,0 +1,61 @@
+
+.signin-form-wrapper{
+    background-image: url(../../images/bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 620px;
+    padding: 50px 10px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+.or-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.first-line{
+    width: 150px;
+    height: 2px;
+    background-color:rgba(170, 168, 168, 0.601);
+}
+.secound-or{
+    font-size: 22px;
+    color: gray;
+}
+.third-line{
+    width: 150px;
+    height: 2px;
+    background-color:rgba(170, 168, 168, 0.601);
+}
+.google_btn{
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #d4cece;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.google_btn:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* media quiries  */
+
+/* medium device  */
+@media screen and (max-width:1024px) {
+    .first-line{
+        width: 80px;
+    }
+    .third-line{
+        width: 80px;
+    }
+}
+@media screen and (max-width:567px) {
+    .first-line{
+        width: 100px;
+    }
+    .third-line{
+        width: 100px;
+    }
+}

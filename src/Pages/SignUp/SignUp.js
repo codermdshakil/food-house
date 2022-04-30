@@ -26,7 +26,7 @@ const SignUp = () => {
                                     <input type="email" name='email' placeholder='E-mail' required /><br />
                                     <input type="password" name='password' placeholder='Password' required /> <br />
                                     <input type="password" name='confirmPassword' placeholder='Confirm Password' required /><br />
-                                    <button type="submit">Sign Up <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
+                                    <button type="submit" className='signUp-btn'>Sign Up <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>
                                     <p style={{ color: "gray" }} className='text-start py-3 px-2'>Already have an account? <Link className='login-btn' to='/login'>Sing In</Link></p>
