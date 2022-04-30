@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './Banner.css';
-import banner1 from '../../images/banner/banner-1.png';
 
 
 
@@ -23,25 +22,37 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="item-container">
                         <div className="container">
-                            <div className='row d-flex align-items-center'>
+                            <div className='row'>
                                 <div className="col-lg-6 col-md-6">
-                                    <div className='product-banner-title'>
+                                    <div className='product-banner-title '>
                                         <p className='feaured-title'>Feature Product</p>
                                         <h2>May <span className='highlight'>protect</span> your brain as you age</h2>
                                         <p>Contains beneficial plant compounds. Apples are rich in plant compounds, particularly polyphenols. Supports hydration. Apple juice is 88% water and tastes good.</p>
-                                        <button className='banner-btn'>Juicy Apple</button>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-6 col-11  m-auto order-first order-md-last mb-5">
-                                    <div className='img-frame d-block'>
-                                        <img src={banner1} className="img-fluid" alt="" />
+                                        <button className='banner-btn'>Juicy Apple  </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
+                <SwiperSlide>
+                    <div className="item-2-container">
+                        <div className="container">
+                            <div className='row'>
+                                <div className="col-lg-6 col-md-6">
+
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className='text-end'>
+                                        <p className='feaured-title'>Feature Product</p>
+                                        <h2>Most Nutrient-Dense Vegetables</h2>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, illum nesciunt! Recusandae est facilis eius aut labore in neque facere ad odit, iste aperiam et tempore deserunt doloribus consequatur eum!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
             </Swiper>
         </>
