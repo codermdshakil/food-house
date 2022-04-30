@@ -23,7 +23,7 @@ const SignIn = () => {
                                 <form>
                                     <input type="email" name='email' placeholder='E-mail' required /><br />
                                     <input type="password" name='password' placeholder='Password' required /> <br />
-                                    <p className='text-start px-2 d-flex align-items-center'>Forgot password ? </p>
+                                    <p className='text-start px-2 d-flex align-items-center'>Forget password ? <button class="btn btn-link text-decoration-none" style={{color:'#4092c1', cursor:'pointer'}} > Reset  Password</button></p>
                                     <button type="submit" className='signUp-btn' >Sign In <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>
