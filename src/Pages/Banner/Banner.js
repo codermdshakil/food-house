@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './Banner.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = () => {
     return (
@@ -27,7 +28,7 @@ const Banner = () => {
                                         <p className='feaured-title'>Feature Product</p>
                                         <h2>May <span className='highlight'>Protect</span> your brain as you age</h2>
                                         <p>Contains beneficial plant compounds. Apples are rich in plant compounds, particularly polyphenols. Supports hydration. Apple juice is 88% water and tastes good.</p>
-                                        <button className='banner-btn'>Juicy Apple  </button>
+                                        <button className='banner-btn'>Juicy Apple <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} />  </button>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +48,7 @@ const Banner = () => {
                                             <p className='feaured-title'>Feature Product</p>
                                             <h2>Most  <span className='highlight'> Nutrient </span> lively  Vegetables </h2>
                                             <p>Check the characteristic signs of freshness such as bright, lively color in the vegetable and look to see if the vegetable is crisp and free of soft spots.</p>
-                                            <button className='banner-btn'>Vegetables </button>
+                                            <button className='banner-btn'>Vegetables <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /></button>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +66,7 @@ const Banner = () => {
                                             <p className='feaured-title'>Feature Product</p>
                                             <h2> Having good thymes  in the <span className='highlight'>Garden</span> </h2>
                                             <p>Check the characteristic signs of freshness such as bright, lively color in the vegetable and look to see if the vegetable is crisp and free of soft spots.</p>
-                                            <button className='banner-btn'> Purple Onion</button>
+                                            <button className='banner-btn'> Purple Onion <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /></button>
                                         </div>
                                     </div>
                                 </div>

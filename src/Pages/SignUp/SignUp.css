@@ -42,20 +42,21 @@
 }
 
 .signup-form-box button {
-    background-color: #4092c1;
+    background-color: #ff3030;
     color: #fff;
-    border: 1px solid #4092c1;
+    border: 1px solid #ff3030;
     padding: 12px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     margin-top: 10px;
     transition: all .3s ease-in;
 }
 
 .signup-form-box button:hover {
-    background-color: #fff;
-    color: #4092c1;
+    background-color: #4092c1;
+    border: 1px solid #4092c1;
+    color: #FFF;
 }
 
 .login-btn {
