@@ -11,7 +11,7 @@ const Header = () => {
             <Container>
                 <Navbar.Brand  as={Link} to="/">
                     <div className='d-flex align-items-center'>
-                        <h3 className='title'>Fruit's</h3><h3>HOUSE</h3>
+                        <h3 className='title'>FOOD</h3><h3>HOUSE</h3>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

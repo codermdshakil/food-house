@@ -25,7 +25,7 @@ const Banner = () => {
                                 <div className="col-lg-6 col-md-6 ">
                                     <div className='product-banner-title '>
                                         <p className='feaured-title'>Feature Product</p>
-                                        <h2>May <span className='highlight'>protect</span> your brain as you age</h2>
+                                        <h2>May <span className='highlight'>Protect</span> your brain as you age</h2>
                                         <p>Contains beneficial plant compounds. Apples are rich in plant compounds, particularly polyphenols. Supports hydration. Apple juice is 88% water and tastes good.</p>
                                         <button className='banner-btn'>Juicy Apple  </button>
                                     </div>
