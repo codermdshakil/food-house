@@ -20,7 +20,7 @@ const Header = () => {
                         <CustomLink to='banner'>Banner</CustomLink>
                         <CustomLink to='inventory-items'>Inventory Items</CustomLink>
                         <CustomLink to='blogs'>Blogs</CustomLink>
-                        <CustomLink to='add-item'>Add Item</CustomLink>
+                        {/* <CustomLink to='add-item'>Add Item</CustomLink> */}
                         <CustomLink to='login'>Login</CustomLink>
                     </Nav>
                 </Navbar.Collapse>

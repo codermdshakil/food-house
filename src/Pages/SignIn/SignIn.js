@@ -15,8 +15,7 @@ const SignIn = () => {
         <div className='mt-5 pt-5'>
             <div className="container">
                 <div className="row d-flex align-items-center">
-
-                    <div className="col-lg-6 col-md-6 col-12 m-2 d-block m-auto text-center">
+                    <div className="col-lg-6 col-md-7 col-12 m-2 d-block m-auto text-center">
                         <div className="signin-form-wrapper">
                             <h5 className='welcome-message'>Welcome back again <img src={flower} className="img-fluid mb-2" alt="" /></h5>
                             <h4>Sign In <span className='website-name'> FOOD</span>HOUSE</h4>
@@ -42,7 +41,7 @@ const SignIn = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-10 my-5 order-first order-md-last d-block m-auto">
+                    <div className="col-lg-6 col-md-5 col-10 my-5 order-first order-md-last d-block m-auto">
                         <img src={signInLogo} className="img-fluid d-block m-auto p-2" alt="" />
                     </div>
                 </div>
