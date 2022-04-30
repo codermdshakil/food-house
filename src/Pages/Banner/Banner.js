@@ -7,10 +7,9 @@ import "swiper/css/navigation";
 import './Banner.css';
 
 
-
 const Banner = () => {
     return (
-        <>
+        <div className='banner-wrapper'>
             <Swiper
                 pagination={{
                     type: "fraction",
@@ -23,7 +22,7 @@ const Banner = () => {
                     <div className="item-container">
                         <div className="container">
                             <div className='row'>
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-6 col-md-6 ">
                                     <div className='product-banner-title '>
                                         <p className='feaured-title'>Feature Product</p>
                                         <h2>May <span className='highlight'>protect</span> your brain as you age</h2>
@@ -48,7 +47,7 @@ const Banner = () => {
                                             <p className='feaured-title'>Feature Product</p>
                                             <h2>Most  <span className='highlight'> Nutrient </span> lively  Vegetables </h2>
                                             <p>Check the characteristic signs of freshness such as bright, lively color in the vegetable and look to see if the vegetable is crisp and free of soft spots.</p>
-                                            <button className='banner-btn'>Juicy Apple  </button>
+                                            <button className='banner-btn'>Vegetables </button>
                                         </div>
                                     </div>
                                 </div>
@@ -56,9 +55,29 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
+                <SwiperSlide>
+                    <div className="item-3-container">
+                        <div className="container">
+                            <div className='row'>
+                                <div className="col-lg-6 col-md-7 col-11">
+                                    <div className='text-start '>
+                                        <div className="product-banner2-title">
+                                            <p className='feaured-title'>Feature Product</p>
+                                            <h2> Having good thymes  in the <span className='highlight'>Garden</span> </h2>
+                                            <p>Check the characteristic signs of freshness such as bright, lively color in the vegetable and look to see if the vegetable is crisp and free of soft spots.</p>
+                                            <button className='banner-btn'> Purple Onion</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-5 ">
+                                    {/* empty */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 };
 

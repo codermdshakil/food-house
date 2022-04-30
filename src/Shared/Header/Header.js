@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" className='header-section' variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" fixed="top" className='header-section' variant="light">
             <Container>
                 <Navbar.Brand  as={Link} to="/">
                     <div className='d-flex align-items-center'>
-                        <h3 className='title'>FOOD</h3><h3>HOUSE</h3>
+                        <h3 className='title'>Fruit's</h3><h3>HOUSE</h3>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

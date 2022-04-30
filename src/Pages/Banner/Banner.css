@@ -1,22 +1,42 @@
+.banner-wrapper {
+    margin-top: 60px;
+}
+
+.swiper-button-next {
+    width: 50px;
+    height: 50px;
+    padding: 30px 0px;
+    background-color: #ff3030;
+    color: #fff;
+}
+
+.swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    padding: 30px 0px;
+    background-color: #ff3030;
+    color: #fff;
+}
+
 .item-container {
     background-image: url(../../images/banner/banner-1.png);
-    height: 550px;
+    height: 580px;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    padding: 20px;
 }
 
-.feaured-title{
+.feaured-title {
     font-size: 15px;
     line-height: 1.5;
     font-weight: 500;
     letter-spacing: 6px;
 }
 
-.product-banner-title{
-    margin-top: 80px;
+.product-banner-title {
+    margin-top: 130px;
 }
+
 .product-banner-title h2 {
     font-size: 55px;
 }
@@ -27,7 +47,7 @@
     color: #ff3030;
 }
 
-.banner-btn{
+.banner-btn {
     padding: 14px 22px;
     border: unset;
     border-radius: 10px;
@@ -65,38 +85,61 @@
     width: 100%;
 }
 
+.swiper-pagination {
+    background-color: #ff3030;
+    color: #fff;
+    width: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 /* secound item start here  */
-.item-2-container{
+.item-2-container {
     background-image: url(../../images/banner/banner-2.png);
     background-repeat: no-repeat;
-    height: 550px;
+    height: 580px;
     background-size: cover;
     background-position: top center;
 
 }
-.product-banner2-title{
-    margin-top: 100px;
+
+.product-banner2-title {
+    margin-top: 130px;
 }
-.product-banner2-title h2{
+
+.product-banner2-title h2 {
     font-size: 52px;
 }
+
+/* item three start here  */
+.item-3-container{
+    background-image: url(../../images/banner/banner-3.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 580px;
+}
+
 /* media queries  */
 
 /* medium device  */
 @media screen and (max-width:1024px) {
-    .product-banner-title{
+    .product-banner-title {
         margin-top: 120px;
     }
+
     .product-banner-title h2 {
         font-size: 38px;
     }
-    .product-banner-title p{
+
+    .product-banner-title p {
         font-size: 16px;
     }
-    .highlight{
+
+    .highlight {
         font-size: 39px;
     }
-    .banner-btn{
+
+    .banner-btn {
         padding: 10px 20px;
     }
 
@@ -104,23 +147,65 @@
     .product-banner2-title {
         margin-top: 135px;
     }
-    .product-banner2-title h2{
+
+    .product-banner2-title h2 {
         font-size: 38px;
     }
-    
+    .swiper-button-next{
+        width: 40px;
+        height: 40px;
+    }
+    .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+    }
+    .item-container {
+        height: 550px;
+    }
+    .item-2-container{
+        height: 550px;
+    }
+    .item-3-container{
+        height: 550px;
+    }
+
+
 }
+
 /* medium device  */
 @media screen and (max-width:567px) {
     .product-banner-title h2 {
         font-size: 35px;
     }
-    .highlight{
+
+    .highlight {
         font-size: 35px;
     }
-    .banner-btn{
+
+    .banner-btn {
         padding: 8px 18px;
     }
-    /* secound item start here  */
 
-    
+    .item-container {
+        padding-left: 20px;
+
+    }
+    .swiper-button-next{
+        width: 30px;
+        height: 30px;
+    }
+    .swiper-button-prev{
+        width: 30px;
+        height: 30px;
+    }
+    .item-container {
+        height: 540px;
+    }
+    .item-2-container{
+        height: 540px;
+    }
+    .item-3-container{
+        height: 540px;
+    }
+
 }
