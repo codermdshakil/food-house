@@ -102,12 +102,12 @@ const SignUp = () => {
             }
             <div className="container">
                 <div className="row d-flex align-items-center">
-                    <div className="col-lg-6 col-md-6 col-10 m-2 d-block m-auto">
+                    <div className="col-lg-6 col-md-6 col-10 m-2 d-block m-auto" data-aos="fade-right">
                         <img src={singupLogo} className="img-fluid mt-5 mb-lg-0 mb-4" alt="" />
                     </div>
-                    <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">
+                    <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center" data-aos="fade-down">
                         <div className="signup-form-wrapper">
-                            <h5 className='welcome-message'>welcome  <img src={flower} className="img-fluid mb-2" alt="" /></h5>
+                            <h5 className='welcome-message'> welcome <img src={flower} className="img-fluid mb-2" alt="" /></h5>
                             <h4>Registration In <span className='website-name'> FOOD</span>HOUSE</h4>
                             <div className="signup-form-box">
                                 <form onSubmit={handleUserSignUp}>
