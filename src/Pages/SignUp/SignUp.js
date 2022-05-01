@@ -23,7 +23,7 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [firstError, setFirstError] = useState('');
     const [secoundError, setSecoudError] = useState('');
-    const nevigate = useNavigate();
+    const navigate = useNavigate();
 
 
 
@@ -34,7 +34,7 @@ const SignUp = () => {
 
 
     if (user) {
-        nevigate('/')
+        navigate('/')
     }
 
     if (loading1 || loadingUser) {
@@ -42,6 +42,25 @@ const SignUp = () => {
     }
 
 
+    // handle userName 
+    const hanleUserName = e => {
+        setName(e.target.value)
+    }
+
+    // hanlde user email 
+    const handleUserEmail = e => {
+        setEmail(e.target.value)
+    }
+
+    // handle user password 
+    const handleUserPassword = e => {
+        setPassword(e.target.value)
+    }
+
+    // handle user password 
+    const handleUserConfirmPassword = e => {
+        setConfirmPassword(e.target.value)
+    }
 
 
     // handle user sign up from 
@@ -69,26 +88,6 @@ const SignUp = () => {
         e.target.reset();
     }
 
-    // handle userName 
-    const hanleUserName = e => {
-        setName(e.target.value)
-    }
-
-    // hanlde user email 
-    const handleUserEmail = e => {
-        setEmail(e.target.value)
-    }
-
-    // handle user password 
-    const handleUserPassword = e => {
-        setPassword(e.target.value)
-    }
-
-    // handle user password 
-    const handleUserConfirmPassword = e => {
-        setConfirmPassword(e.target.value)
-    }
-
     return (
         <div className='mt-5 pt-5'>
             <div className="container">
@@ -96,7 +95,7 @@ const SignUp = () => {
                     <div className="col-lg-6 col-md-6 col-10 m-2 d-block m-auto">
                         <img src={singupLogo} className="img-fluid mt-5 mb-lg-0 mb-4" alt="" />
                     </div>
-                    <div className="col-lg-6 col-md-6 col-12 m-2 d-block m-auto text-center">
+                    <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">
                         <div className="signup-form-wrapper">
                             <h5 className='welcome-message'>welcome  <img src={flower} className="img-fluid mb-2" alt="" /></h5>
                             <h4>Registration In <span className='website-name'> FOOD</span>HOUSE</h4>
@@ -111,7 +110,7 @@ const SignUp = () => {
                                     <button type="submit" className='signUp-btn'>Sign Up <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>
-                                    <p style={{ color: "gray" }} className='text-start py-3 px-2'>Already have an account? <Link className='login-btn' to='/login'>Sing In</Link></p>
+                                    <p style={{ color: "gray" }} className='text-start py-3 px-2'>Already have an account? <Link className='login-btn' to='/signin'>Sing In</Link></p>
                                 </div>
                             </div>
                         </div>

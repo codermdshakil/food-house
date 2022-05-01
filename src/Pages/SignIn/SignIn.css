@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    height: 630px;
+    height: 650px;
     padding: 50px 10px;
     border-radius: 20px;
     margin-bottom: 50px;
@@ -32,10 +32,12 @@
     width: 100%;
     padding: 8px;
     margin-top: 10px;
-    border: 1px solid #d4cece;
+    border:none;
+    background-color: #fff;
     border-radius: 25px;
     cursor: pointer;
     transition: .3s ease-in;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 .google_btn:hover{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -50,6 +52,9 @@
     .third-line{
         width: 80px;
     }
+    .signin-form-wrapper{
+        height: 650px;
+    }
 }
 @media screen and (max-width:567px) {
     .first-line{
@@ -57,5 +62,8 @@
     }
     .third-line{
         width: 100px;
+    }
+    .signin-form-wrapper{
+        height: 650px;
     }
 }

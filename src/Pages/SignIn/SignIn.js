@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import signInLogo from '../../images/login.png';
 import flower from '../../images/flower.png';
@@ -7,23 +7,74 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import googleLogo from '../../images/google.png';
 import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
+import auth from '../../firebase.init';
+import { useSignInWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
+import { toast } from 'react-toastify';
+
 
 
 
 const SignIn = () => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    // react firebase hooks 
+    const [user, loadingUpdate] = useAuthState(auth);
+    const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
+
+    console.log(errorSignIn?.message, "from user sign in")
+    console.log(email, password)
+
+
+    if (user) {
+        navigate('/');
+    }
+
+    if (loadingUpdate || loadingSignIn) {
+        return <LoadingSpinner />
+    }
+
+
+    // handle User Email 
+    const hanleUserEmail = e => {
+        setEmail(e.target.value)
+    }
+
+    // handle User Password 
+    const hanleUserPassword = e => {
+        setPassword(e.target.value)
+    }
+
+    // handle user sign in
+    const hanleUserSignIn = e => {
+        e.preventDefault()
+        signInWithEmailAndPassword(email, password);
+        e.target.reset();
+
+    }
+
+
     return (
         <div className='mt-5 pt-5'>
             <div className="container">
                 <div className="row d-flex align-items-center">
-                    <div className="col-lg-6 col-md-7 col-12 m-2 d-block m-auto text-center">
+                    <div className="col-lg-6 col-md-6 col-10 my-5 d-block m-auto">
+                        <img src={signInLogo} className="img-fluid d-block m-auto p-2" alt="" />
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">
                         <div className="signin-form-wrapper">
                             <h5 className='welcome-message'>Welcome back again <img src={flower} className="img-fluid mb-2" alt="" /></h5>
                             <h4>Sign In <span className='website-name'> FOOD</span>HOUSE</h4>
                             <div className="signup-form-box">
-                                <form>
-                                    <input type="email" name='email' placeholder='E-mail' required /><br />
-                                    <input type="password" name='password' placeholder='Password' required /> <br />
-                                    <p  style={{ color: "gray" }} className='text-start px-2 d-flex align-items-center'>Forget password ? <button className="btn btn-link text-decoration-none" style={{color:'#4092c1', cursor:'pointer'}} > Reset  Password</button></p>
+                                <form onSubmit={hanleUserSignIn}>
+                                    <input onBlur={hanleUserEmail} type="email" name='email' placeholder='E-mail' required /><br />
+                                    <input onBlur={hanleUserPassword} type="password" name='password' placeholder='Password' required /> <br />
+                                    <p style={{ color: "gray" }} className='text-start px-2 d-flex align-items-center'>Forget password ? <button className="btn btn-link text-decoration-none" style={{ color: '#4092c1', cursor: 'pointer' }} > Reset  Password</button></p>
+                                    <p className='error-style' >{errorSignIn?.message.slice(22, 36)}</p>
                                     <button type="submit" className='signUp-btn' >Sign In <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
                                 <div>
@@ -40,9 +91,6 @@ const SignIn = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-6 col-md-5 col-10 my-5 order-first order-md-last d-block m-auto">
-                        <img src={signInLogo} className="img-fluid d-block m-auto p-2" alt="" />
                     </div>
                 </div>
             </div>
