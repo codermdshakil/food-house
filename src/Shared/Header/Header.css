@@ -20,3 +20,17 @@ a:hover{
 .burger{
     color: #ff3030;
 }
+
+.logout-btn{
+    color: white;
+    background-color: #82cd00;
+    border: 1px solid #82cd00;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.logout-btn:hover{
+    background-color: #fff;
+    color: #82cd00;
+}

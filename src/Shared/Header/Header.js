@@ -3,9 +3,31 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import CustomLink from '../CustomLink/CustomLink';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import { signOut } from 'firebase/auth';
+import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
+
+    
+    
+    const [user, loading] = useAuthState(auth);
+
+    const handleSignOut = e => {
+        e.preventDefault()
+        signOut(auth).then(() => {
+            toast(`SignOut successfully`)
+        })
+    }
+
+    if (loading) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" fixed="top" className='header-section' variant="light">
             <Container>
@@ -16,12 +38,11 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto">
+                    <Nav className="ms-auto d-flex align-items-center">
                         <CustomLink to='banner'>Banner</CustomLink>
                         <CustomLink to='inventory-items'>Inventory Items</CustomLink>
                         <CustomLink to='blogs'>Blogs</CustomLink>
-                        {/* <CustomLink to='add-item'>Add Item</CustomLink> */}
-                        <CustomLink to='login'>Login</CustomLink>
+                        {user?.uid ? <button onClick={handleSignOut} className='logout-btn'>Log Out <FontAwesomeIcon icon={faSignOut} /> </button> : <CustomLink to='login'>Login</CustomLink>} 
                     </Nav>
                 </Navbar.Collapse>
             </Container>

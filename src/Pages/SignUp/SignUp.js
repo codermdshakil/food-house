@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+import { useCreateUserWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
+
+
 
 
 
@@ -17,36 +23,49 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [firstError, setFirstError] = useState('');
     const [secoundError, setSecoudError] = useState('');
+    const nevigate = useNavigate();
 
-    console.log(firstError, secoundError)
 
-    console.log(name, email, password, confirmPassword);
+
+    // react firebase hooks
+    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth);
+    const [user, loadingUser] = useAuthState(auth)
+    console.log(user)
+
+
+    if (user) {
+        nevigate('/')
+    }
+
+    if (loading1 || loadingUser) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+
+
 
 
     // handle user sign up from 
     const handleUserSignUp = e => {
         e.preventDefault();
-        
-
-        if(password !== confirmPassword){
+        if (password !== confirmPassword) {
             setFirstError('Your two password is not match!');
             setSecoudError('');
             return;
         }
 
-        if(confirmPassword.length  < 6){
-            setSecoudError('You password should 6 charecter!');
+        if (confirmPassword.length < 6) {
+            setSecoudError('You password should 6  character and longer!!');
             setFirstError('');
             return;
         }
 
-        if(password === confirmPassword){
-            console.log('this is true')
+        if (password === confirmPassword) {
+            createUserWithEmailAndPassword(email, password)
             setFirstError('');
             setSecoudError('');
             toast(`${name} SignUp successfully!`)
+
         }
-        
         e.target.reset();
     }
 
@@ -69,7 +88,6 @@ const SignUp = () => {
     const handleUserConfirmPassword = e => {
         setConfirmPassword(e.target.value)
     }
-
 
     return (
         <div className='mt-5 pt-5'>
