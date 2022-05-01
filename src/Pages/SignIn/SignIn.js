@@ -8,7 +8,7 @@ import googleLogo from '../../images/google.png';
 import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useAuthState, useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useAuthState, useSendPasswordResetEmail, useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import { toast } from 'react-toastify';
@@ -27,18 +27,16 @@ const SignIn = () => {
     const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const [signInWithGoogle, , loadingGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGithub, , loading] = useSignInWithGithub(auth);
 
 
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
-
-    console.log(email, password)
-
 
     if (user) {
         navigate('/');
     }
 
-    if (loadingUpdate || loadingSignIn || sending || loadingGoogle) {
+    if (loadingUpdate || loadingSignIn || sending || loadingGoogle || loading) {
         return <LoadingSpinner />
     }
 
@@ -57,12 +55,6 @@ const SignIn = () => {
     const hanleUserSignIn = e => {
         e.preventDefault()
         signInWithEmailAndPassword(email, password);
-        toast.promise(
-            resolveAfter3Sec,
-            {
-              success: `Sign in succefully`,
-            }
-        )
         e.target.reset();
 
     }
@@ -72,12 +64,12 @@ const SignIn = () => {
         if (email === "") {
             toast('Please! enter a E-mail address!!');
         }
-        else{
+        else {
             sendPasswordResetEmail(email);
             toast.promise(
                 resolveAfter3Sec,
                 {
-                  success: 'Sent Email ',
+                    success: 'Sent Email',
                 }
             )
         }
@@ -86,9 +78,24 @@ const SignIn = () => {
     // handle google sign in 
     const handleGoogleSignIn = () => {
         signInWithGoogle();
-        toast('Sign In with Google');
+        toast.promise(
+            resolveAfter3Sec,
+            {
+                success: 'Sign In using Google',
+            }
+        )
     }
 
+    // handle github sign in 
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+        toast.promise(
+            resolveAfter3Sec,
+            {
+                success: 'Sign In using Github',
+            }
+        )
+    }
 
 
     return (
@@ -120,7 +127,7 @@ const SignIn = () => {
                                 </div>
                                 <div>
                                     <button onClick={handleGoogleSignIn} className='google_btn'><img style={{ marginRight: '10px' }} src={googleLogo} className="img-fluid " alt="" />  Sign In with Google</button>
-                                    <button className='google_btn mt-3'><img style={{ marginRight: '10px' }} src={githubLogo} className="img-fluid " alt="" />  Sign In with Github</button>
+                                    <button onClick={handleGithubSignIn} className='google_btn mt-3'><img style={{ marginRight: '10px' }} src={githubLogo} className="img-fluid " alt="" />  Sign In with Github</button>
                                 </div>
                             </div>
                         </div>
