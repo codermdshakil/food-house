@@ -9,7 +9,9 @@ import NotFound from './Shared/NotFound/NotFound';
 import SignIn from './Pages/SignIn/SignIn';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 function App() {
   return (
