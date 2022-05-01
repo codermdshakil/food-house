@@ -10,6 +10,8 @@ import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
+import PageTitle from '../../hooks/usePageTitle';
+
 
 
 
@@ -98,6 +100,9 @@ const SignUp = () => {
 
     return (
         <div className='mt-5 pt-5'>
+            {
+                PageTitle('Sign Up')
+            }
             <div className="container">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-6 col-md-6 col-10 m-2 d-block m-auto">
