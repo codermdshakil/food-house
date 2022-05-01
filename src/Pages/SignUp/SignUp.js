@@ -7,9 +7,10 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
+import { sendEmailVerification } from 'firebase/auth';
 
 
 
@@ -28,7 +29,7 @@ const SignUp = () => {
 
 
     // react firebase hooks
-    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
     const [user, loadingUser] = useAuthState(auth)
     console.log(user)
 
@@ -82,7 +83,7 @@ const SignUp = () => {
             createUserWithEmailAndPassword(email, password)
             setFirstError('');
             setSecoudError('');
-            toast(`${name} SignUp successfully!`)
+            toast(`${name} Sent Email`)
 
         }
         e.target.reset();
