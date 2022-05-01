@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation , Autoplay} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -15,8 +15,12 @@ const Banner = () => {
                 pagination={{
                     type: "fraction",
                 }}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[ Autoplay ,Pagination, Navigation]}
                 className="mySwiper"
             >
                 <SwiperSlide>

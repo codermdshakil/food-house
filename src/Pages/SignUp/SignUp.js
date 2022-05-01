@@ -14,9 +14,6 @@ import PageTitle from '../../hooks/usePageTitle';
 
 
 
-
-
-
 const SignUp = () => {
 
     const [name, setName] = useState('');
