@@ -8,7 +8,7 @@ import googleLogo from '../../images/google.png';
 import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useAuthState, useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import { toast } from 'react-toastify';
@@ -25,8 +25,12 @@ const SignIn = () => {
     // react firebase hooks 
     const [user, loadingUpdate] = useAuthState(auth);
     const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [signInWithGoogle, , loadingGoogle] = useSignInWithGoogle(auth);
 
-    console.log(errorSignIn?.message, "from user sign in")
+
+    const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
+
     console.log(email, password)
 
 
@@ -34,7 +38,7 @@ const SignIn = () => {
         navigate('/');
     }
 
-    if (loadingUpdate || loadingSignIn) {
+    if (loadingUpdate || loadingSignIn || sending || loadingGoogle) {
         return <LoadingSpinner />
     }
 
@@ -53,9 +57,38 @@ const SignIn = () => {
     const hanleUserSignIn = e => {
         e.preventDefault()
         signInWithEmailAndPassword(email, password);
+        toast.promise(
+            resolveAfter3Sec,
+            {
+              success: `Sign in succefully`,
+            }
+        )
         e.target.reset();
 
     }
+
+    // handle user password reset 
+    const handleResetPassword = () => {
+        if (email === "") {
+            toast('Please! enter a E-mail address!!');
+        }
+        else{
+            sendPasswordResetEmail(email);
+            toast.promise(
+                resolveAfter3Sec,
+                {
+                  success: 'Sent Email ',
+                }
+            )
+        }
+    }
+
+    // handle google sign in 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle();
+        toast('Sign In with Google');
+    }
+
 
 
     return (
@@ -73,7 +106,7 @@ const SignIn = () => {
                                 <form onSubmit={hanleUserSignIn}>
                                     <input onBlur={hanleUserEmail} type="email" name='email' placeholder='E-mail' required /><br />
                                     <input onBlur={hanleUserPassword} type="password" name='password' placeholder='Password' required /> <br />
-                                    <p style={{ color: "gray" }} className='text-start px-2 d-flex align-items-center'>Forget password ? <button className="btn btn-link text-decoration-none" style={{ color: '#4092c1', cursor: 'pointer' }} > Reset  Password</button></p>
+                                    <p style={{ color: "gray" }} className='text-start px-2 d-flex align-items-center'>Forget password ? <button onClick={handleResetPassword} className="btn btn-link text-decoration-none" style={{ color: '#4092c1', cursor: 'pointer' }} > Reset  Password</button></p>
                                     <p className='error-style' >{errorSignIn?.message.slice(22, 36)}</p>
                                     <button type="submit" className='signUp-btn' >Sign In <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faArrowRight} /> </button>
                                 </form>
@@ -86,7 +119,7 @@ const SignIn = () => {
                                     <div className='third-line'> </div>
                                 </div>
                                 <div>
-                                    <button className='google_btn'><img style={{ marginRight: '10px' }} src={googleLogo} className="img-fluid " alt="" />  Sign In with Google</button>
+                                    <button onClick={handleGoogleSignIn} className='google_btn'><img style={{ marginRight: '10px' }} src={googleLogo} className="img-fluid " alt="" />  Sign In with Google</button>
                                     <button className='google_btn mt-3'><img style={{ marginRight: '10px' }} src={githubLogo} className="img-fluid " alt="" />  Sign In with Github</button>
                                 </div>
                             </div>
