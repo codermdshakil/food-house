@@ -39,7 +39,7 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
                                 <article className='footer-items'>
                                     <h4 className='footer-title'>Quick Links</h4>
-                                    <Link to='/banner' className='link-title'>Banner</Link><br />
+                                    <Link to='/home' className='link-title'>Banner</Link><br />
                                     <Link to='/inventory-items' className='link-title'>
                                         Inventory Items</Link><br />
                                     <Link to='/blogs' className='link-title'>Blogs</Link><br />
@@ -64,7 +64,7 @@ const Footer = () => {
                                     <h4 className='footer-title'>NewsLetter</h4>
                                     <div className='subscribe'>
                                         <input type="text" name='email' placeholder='E-mail' required />
-                                        <button onClick={() => setNotification(false)} >Subscribes
+                                        <button onClick={() => setNotification(false)} >Subscribes now
                                             {notification ? <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBellSlash} /> : <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBell} />}</button>
                                     </div>
                                 </article>

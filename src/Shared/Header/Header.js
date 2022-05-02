@@ -38,7 +38,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto d-flex align-items-center">
-                        <CustomLink to='banner'>Banner</CustomLink>
+                        <CustomLink to='home'>Banner</CustomLink>
                         <CustomLink to='inventory-items'>Inventory Items</CustomLink>
                         <CustomLink to='blogs'>Blogs</CustomLink>
                         <CustomLink to='footer'>Footer</CustomLink>
