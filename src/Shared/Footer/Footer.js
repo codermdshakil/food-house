@@ -16,7 +16,7 @@ const Footer = () => {
     const dates = new Date();
     let year = dates.getFullYear();
     const [notification, setNotification] = useState(true);
-    
+
     return (
         <div className='mt-5 pt-5' >
             <div className="footer-section" id='footer'>
@@ -25,17 +25,28 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
                                 <div className='footer-items'>
-                                    <div className='d-flex align-items-center'>
+                                    <div className='d-flex align-items-center'
+                                    data-aos="fade-down"
+                                    >
                                         <h3 className='title'>FOOD</h3><h3 style={{ color: 'white' }}>HOUSE</h3>
                                     </div>
-                                    <p>Storing of food has several main purposes: Storage of harvested and processed plant and animal food products for distribution to consumers.</p>
-                                    <small><FontAwesomeIcon icon={faLocationDot} /> Kapasia, Gazipur, Dhaka</small> <br />
-                                    <small><FontAwesomeIcon icon={faEnvelope} /> ahmedshakil0512@gmail.com</small> <br />
-                                    <small><FontAwesomeIcon icon={faPhone} /> +8801729107200 </small>
+                                    <div
+                                        data-aos="fade-right"
+                                        data-aos-offset="300"
+                                        data-aos-easing="ease-in-sine"
+                                    >
+                                        <p>Storing of food has several main purposes: Storage of harvested and processed plant and animal food products for distribution to consumers.</p>
+                                        <small><FontAwesomeIcon icon={faLocationDot} /> Kapasia, Gazipur, Dhaka</small> <br />
+                                        <small><FontAwesomeIcon icon={faEnvelope} /> ahmedshakil0512@gmail.com</small> <br />
+                                        <small><FontAwesomeIcon icon={faPhone} /> +8801729107200 </small>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <div className='footer-items'>
+                                <div className='footer-items'
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-center"
+                                >
                                     <h4 className='footer-title'>Quick Links</h4>
                                     <Link to='/banner' className='link-title'>Banner</Link><br />
                                     <Link to='/inventory-items' className='link-title'>
@@ -46,7 +57,10 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <div className='footer-items'>
+                                <div className='footer-items'
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-center"
+                                >
                                     <h4 className='footer-title'>Follow Us</h4>
                                     <div className='social-media'>
                                         <a target='_blank' href="https://www.facebook.com/codermdshakil"> <img src={facebookLogo} className="img-fluid" alt="" /></a>
@@ -58,7 +72,9 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <div className='footer-items'>
+                                <div className='footer-items'
+                                    data-aos="fade-left"
+                                >
                                     <h4 className='footer-title'>NewsLetter</h4>
                                     <div className='subscribe'>
                                         <input type="text" name='email' placeholder='E-mail' required />
@@ -69,7 +85,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <p className='text-center pt-5 px-4 developer'>&copy; CopyRight Reserved <span> <a target='_blank' href="https://www.linkedin.com/in/codermdshakil/"> <span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </a> </span> </p>
+                    <p className='text-center pt-5 px-4 developer' 
+                    data-aos="zoom-in"
+                    >&copy; CopyRight Reserved <span> <a target='_blank' href="https://www.linkedin.com/in/codermdshakil/"> <span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </a> </span> </p>
                 </div>
             </div>
         </div>
