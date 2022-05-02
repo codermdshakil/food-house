@@ -41,6 +41,7 @@ const Header = () => {
                         <CustomLink to='banner'>Banner</CustomLink>
                         <CustomLink to='inventory-items'>Inventory Items</CustomLink>
                         <CustomLink to='blogs'>Blogs</CustomLink>
+                        <CustomLink to='footer'>Footer</CustomLink>
                         {user?.uid ? <button onClick={handleSignOut} className='logout-btn'>Sign Out <FontAwesomeIcon icon={faSignOut} /> </button> : <CustomLink to='signin'>Sign In</CustomLink>} 
                     </Nav>
                 </Navbar.Collapse>

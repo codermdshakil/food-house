@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import signInLogo from '../../images/login.png';
 import flower from '../../images/flower.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import googleLogo from '../../images/google.png';
 import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
@@ -103,11 +103,11 @@ const SignIn = () => {
             {
                 PageTitle('Sign In')
             }
-            <div className='mt-5 pt-5'>
+            <div className='mt-5 pt-5' style={{marginTop:'20px'}}>
                 <div className="container">
                     <div className="row d-flex align-items-center">
                         <div className="col-lg-6 col-md-6 col-10 my-5 my-lg-0 d-block m-auto" 
-                           data-aos="zoom-in-right">
+                          data-aos="fade-right">
                             <img src={signInLogo} className="img-fluid d-block m-auto p-2" alt="" />
                         </div>
                         <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">
