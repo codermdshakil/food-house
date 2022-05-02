@@ -26,7 +26,7 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
                                 <div className='footer-items'>
                                     <div className='d-flex align-items-center'
-                                    data-aos="fade-down"
+                                        data-aos="fade-down"
                                     >
                                         <h3 className='title'>FOOD</h3><h3 style={{ color: 'white' }}>HOUSE</h3>
                                     </div>
@@ -63,34 +63,34 @@ const Footer = () => {
                                 >
                                     <h4 className='footer-title'>Follow Us</h4>
                                     <div className='social-media'>
-                                        <a target='_blank' href="https://www.facebook.com/codermdshakil"> <img src={facebookLogo} className="img-fluid" alt="" /></a>
-                                        <a target='_blank' href="https://www.instagram.com/codermdshakil/"> <img src={instaLogo} className="img-fluid" alt="" /></a>
-                                        <a target='_blank' href="https://twitter.com/codermdshakil/"> <img src={twitterLogo} className="img-fluid" alt="" /></a>
-                                        <a target='_blank' href="https://www.linkedin.com/in/codermdshakil/"> <img src={linkDinLogo} className="img-fluid" alt="" /></a>
-                                    </div>
-                                    <img src={paymentLogo} className="img-fluid mt-4" alt="" />
+                                        <img src={facebookLogo} className="img-fluid" alt="" />
+                                        <img src={instaLogo} className="img-fluid" alt="" />
+                                        <img src={twitterLogo} className="img-fluid" alt="" />
+                                        <img src={linkDinLogo} className="img-fluid" alt="" />
                                 </div>
+                                <img src={paymentLogo} className="img-fluid mt-4" alt="" />
                             </div>
-                            <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <div className='footer-items'
-                                    data-aos="fade-left"
-                                >
-                                    <h4 className='footer-title'>NewsLetter</h4>
-                                    <div className='subscribe'>
-                                        <input type="text" name='email' placeholder='E-mail' required />
-                                        <button onClick={() => setNotification(false)} >Subscribes
-                                            {notification ? <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBellSlash} /> : <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBell} />}</button>
-                                    </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
+                            <div className='footer-items'
+                                data-aos="fade-left"
+                            >
+                                <h4 className='footer-title'>NewsLetter</h4>
+                                <div className='subscribe'>
+                                    <input type="text" name='email' placeholder='E-mail' required />
+                                    <button onClick={() => setNotification(false)} >Subscribes
+                                        {notification ? <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBellSlash} /> : <FontAwesomeIcon style={{ marginLeft: '10px' }} icon={faBell} />}</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p className='text-center pt-5 px-4 developer' 
-                    data-aos="zoom-in"
-                    >&copy; CopyRight Reserved <span> <a target='_blank' href="https://www.linkedin.com/in/codermdshakil/"> <span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </a> </span> </p>
                 </div>
+                <p className='text-center pt-5 px-4 developer'
+                    data-aos="zoom-in"
+                >&copy; CopyRight Reserved <span> <span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </span> </p>
             </div>
         </div>
+        </div >
     );
 };
 
