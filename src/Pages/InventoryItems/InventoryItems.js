@@ -11,7 +11,7 @@ const InventoryItems = () => {
     const [products] = useStoredProducts()
     const sixInventoryItem = products.slice(0, 6);
     return (
-        <div className="container">
+        <div className="container" id="inventory-items">
             <div className='py-3'>
                 <p className='feature-title mt-5'>Featured Product</p>
                 <h4 className='products-title' >Popular Products</h4>

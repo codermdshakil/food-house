@@ -26,10 +26,11 @@
     border: 1px solid hsl(261deg 80% 48%);
     box-shadow:  0px 8px 24px rgba(10, 10, 10, 0.458);
     transition: .3s ease-in;
+    cursor: pointer;
 }
 
 .all-inventory button:hover{
-    color: #fff;
-    background-color:#4092c1;
+    color: hsl(261deg 80% 48%);
+    background-color:#fff;
 }
 /*  */

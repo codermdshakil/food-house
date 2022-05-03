@@ -36,7 +36,6 @@
 }
 
 .signup-form-box input:focus {
-    letter-spacing: 2px;
     transition: all .3s ease-in-out;
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.133) 0px 8px 24px;

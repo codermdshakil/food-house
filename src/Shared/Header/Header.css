@@ -1,27 +1,21 @@
-.header-section{
+.header-section {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.title{
+
+.title {
     color: #ff3030;
     font-weight: bold;
 }
 
-a{
+a {
     color: black;
     font-size: 18px;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 16px;
     transition: .3s ease-in-out;
 }
 
-a:hover{
-    color:#ff3030;
-}
-.burger{
-    color: #ff3030;
-}
-
-.logout-btn{
+.logout-btn {
     color: white;
     background-color: #82cd00;
     border: 1px solid #82cd00;
@@ -30,7 +24,8 @@ a:hover{
     cursor: pointer;
     transition: .3s ease-in;
 }
-.logout-btn:hover{
+
+.logout-btn:hover {
     background-color: #fff;
     color: #82cd00;
 }
