@@ -3,7 +3,7 @@ import singupLogo from '../../images/signup.png';
 import './SignUp.css';
 import flower from '../../images/flower.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';

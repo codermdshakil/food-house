@@ -1,12 +1,25 @@
-
-.item-box{
+.item-box {
     border: 1px solid lightgray;
     margin-bottom: 30px;
     padding: 10px;
     border-radius: 10px;
 }
-.item-box img{
+
+.item-box p {
+    color: gray;
+}
+
+.item-box img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.quantity-style {
+    color: #ff3030;
+    ;
+}
+
+.suplier {
+    color: #4092c1;
 }
