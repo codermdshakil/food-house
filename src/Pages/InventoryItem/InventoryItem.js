@@ -2,12 +2,15 @@ import React from 'react';
 import './InventoryItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
 
 const InventoryItem = ({ signleItem }) => {
+    const { _id, img, name, price, quantity, supliername, description } = signleItem;
+    const navigate = useNavigate();
 
-    const { _id ,img, name, price, quantity, supliername, description } = signleItem;
     const handleInventoryUpdate = (id) => {
-        console.log(id)
+        navigate(`/inventory/${id}`)
     }
 
     return (

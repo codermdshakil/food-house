@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Footer from './Shared/Footer/Footer';
+import Inventory from './Pages/Inventory/Inventory';
 AOS.init();
 
 function App() {
@@ -21,10 +22,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
-        <Route path='/signin' element={<SignIn></SignIn>}></Route>
-        <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/footer' element={<Footer></Footer>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/inventory/:inventoryId' element={<Inventory/>}></Route>
+        <Route path='/signin' element={<SignIn/>}></Route>
+        <Route path='/signup' element={<SignUp/>}></Route>
+        <Route path='/footer' element={<Footer/>}></Route>
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer/>
