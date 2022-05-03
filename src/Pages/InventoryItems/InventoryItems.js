@@ -12,7 +12,7 @@ const InventoryItems = () => {
     return (
         <div className="container">
             <div className='py-3'>
-                <p className='feature-title'>Featured Product</p>
+                <p className='feature-title mt-5'>Featured Product</p>
                 <h4 className='products-title' >Popular Products</h4>
             </div>
             <div className="row">
