@@ -1,13 +1,35 @@
-
-.feature-title{
+.feature-title {
     margin-top: 20px;
     text-align: center;
     font-size: 22px;
-    color:#fe3030;
-    margin-bottom:2px;
+    color: #fe3030;
+    margin-bottom: 2px;
 }
-.products-title{
+
+.products-title {
     font-size: 35px;
     text-align: center;
     margin-bottom: 30px;
 }
+
+.all-inventory {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.all-inventory button{
+    color: #fff;
+    background-color: hsl(261deg 80% 48%);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid hsl(261deg 80% 48%);
+    box-shadow:  0px 8px 24px rgba(10, 10, 10, 0.458);
+    transition: .3s ease-in;
+}
+
+.all-inventory button:hover{
+    color: #fff;
+    background-color:#4092c1;
+}
+/*  */
