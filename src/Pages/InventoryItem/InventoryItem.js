@@ -5,7 +5,10 @@ import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 const InventoryItem = ({ signleItem }) => {
 
-    const { img, name, price, quantity, supliername, description } = signleItem;
+    const { _id ,img, name, price, quantity, supliername, description } = signleItem;
+    const handleInventoryUpdate = (id) => {
+        console.log(id)
+    }
 
     return (
         <div className='col-lg-4 '>
@@ -19,7 +22,7 @@ const InventoryItem = ({ signleItem }) => {
                     <h6>Quantity : <span className='quantity-style'>{quantity}</span></h6>
                     <h6>Suplier: By <span className='suplier'> {supliername}</span> </h6>
                     <p>{description}</p>
-                    <button>Update Item <FontAwesomeIcon icon={faArrowAltCircleUp} /> </button>
+                    <button onClick={() => handleInventoryUpdate(_id)} > Stock Update <FontAwesomeIcon icon={faArrowAltCircleUp} /> </button>
                 </div>
             </div>
         </div>

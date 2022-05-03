@@ -9,6 +9,7 @@
     overflow: hidden;
 }
 .item-box:hover.item-box img{
+    border-radius: 10px;
     transform: scale(1.06);
 }
 .item-box:hover .item-box img{

@@ -8,7 +8,6 @@ const InventoryItems = () => {
 
     const [products] = useStoredProducts()
     const sixInventoryItem = products.slice(0, 6);
-    console.log(sixInventoryItem);
     return (
         <div className="container">
             <div className='py-3'>
