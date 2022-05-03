@@ -9,7 +9,7 @@ import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useAuthState, useSendPasswordResetEmail, useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useLocation} from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import { toast } from 'react-toastify';
 import PageTitle from '../../hooks/usePageTitle';
@@ -21,6 +21,7 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
 
     // react firebase hooks 
     const [user, loadingUpdate] = useAuthState(auth);
@@ -32,8 +33,14 @@ const SignIn = () => {
 
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
+    const from = location.state?.from?.pathname || "/";
+
     if (user) {
         navigate('/');
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
     }
 
     if (loadingUpdate || loadingSignIn || sending || loadingGoogle || loading) {
