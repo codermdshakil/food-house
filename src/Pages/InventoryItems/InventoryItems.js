@@ -1,6 +1,7 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useStoredProducts from '../../hooks/useStoredProducts';
 import InventoryItem from '../../Pages/InventoryItem/InventoryItem'
 import './InventoryItems.css';
@@ -22,7 +23,7 @@ const InventoryItems = () => {
                 }
             </div>
             <div className='all-inventory'>
-                <button>Manage Inventories <FontAwesomeIcon icon={faArrowRight} /></button>
+                <p><Link className='text-white' to="/manageinventoryitems">Manage Inventories <FontAwesomeIcon icon={faArrowRight} /> </Link> </p>
             </div>
         </div>
     );

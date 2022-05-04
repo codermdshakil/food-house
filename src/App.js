@@ -14,6 +14,7 @@ import 'aos/dist/aos.css';
 import Footer from './Shared/Footer/Footer';
 import Inventory from './Pages/Inventory/Inventory';
 import RequireAuth from './Shared/RequireAuth/RequireAuth';
+import ManageInventoryItems from './Pages/ManageInventoryItems/ManageInventoryItems';
 AOS.init();
 
 
@@ -29,6 +30,7 @@ function App() {
             <Inventory />
           </RequireAuth>
         }></Route>
+        <Route path='/manageinventoryitems' element={<ManageInventoryItems></ManageInventoryItems>}></Route>
         <Route path='/signin' element={<SignIn />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/footer' element={<Footer />}></Route>

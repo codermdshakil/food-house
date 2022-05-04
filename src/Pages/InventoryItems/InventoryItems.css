@@ -18,8 +18,7 @@
     justify-content: end;
 }
 
-.all-inventory button{
-    color: #fff;
+.all-inventory p{
     background-color: hsl(261deg 80% 48%);
     padding: 10px 20px;
     border-radius: 25px;
@@ -29,8 +28,3 @@
     cursor: pointer;
 }
 
-.all-inventory button:hover{
-    color: hsl(261deg 80% 48%);
-    background-color:#fff;
-}
-/*  */

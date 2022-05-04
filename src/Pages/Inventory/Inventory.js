@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './inventory.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import usePageTitle from '../../hooks/usePageTitle';
 import { toast } from 'react-toastify';
 
@@ -13,7 +13,7 @@ const Inventory = () => {
     const [singleProduct, setSinleProduct] = useState({});
     const { _id, img, name, price, quantity, sold, supliername, description } = singleProduct;
 
-    
+
     // tostify time control
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
@@ -76,7 +76,7 @@ const Inventory = () => {
         toast.promise(
             resolveAfter3Sec,
             {
-                success:`New ${userInput} product stored`,
+                success: `New ${userInput} product stored`,
             }
         )
     }
@@ -89,7 +89,7 @@ const Inventory = () => {
             <div className="container ">
                 <div className="row d-flex align-items-center singleWrapper">
                     <div className="col-lg-5 col-md-8 col-10 d-block m-auto">
-                        <article className="singleProduct">
+                        <article className="singleProduct mb-5">
                             <div className='singleProduct-frame'>
                                 <img src={img} alt="" />
                             </div>
@@ -106,6 +106,9 @@ const Inventory = () => {
                                 <button onClick={() => handleDelivery(quantity)} > Deliverd  <FontAwesomeIcon icon={faPaperPlane} /> </button>
                             </div>
                         </article>
+                        <div className='all-inventory'>
+                            <p><Link className='text-white' to="/manageinventoryitems">Manage Inventories <FontAwesomeIcon icon={faArrowRight} /> </Link> </p>
+                        </div>
                     </div>
                     <div className='col-lg-1 col-md-0  restored'></div>
                     <div className="col-lg-6 col-md-8 d-block col-11 m-auto">
