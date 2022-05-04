@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './inventory.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import usePageTitle from '../../hooks/usePageTitle';
 
 
 const Inventory = () => {
@@ -45,6 +46,9 @@ const Inventory = () => {
 
     return (
         <div className='mt-5 py-5'>
+            {
+                usePageTitle('Stock Item')
+            }
             <div className="container ">
                 <div className="row singleWrapper">
                     <div className="col-lg-5">
