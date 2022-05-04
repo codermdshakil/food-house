@@ -22,7 +22,7 @@ const InventoryItems = () => {
                 }
             </div>
             <div className='all-inventory'>
-                <button>All Inventories <FontAwesomeIcon icon={faArrowRight} /></button>
+                <button>Manage Inventories <FontAwesomeIcon icon={faArrowRight} /></button>
             </div>
         </div>
     );

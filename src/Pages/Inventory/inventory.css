@@ -19,7 +19,9 @@
 .product-info {
     padding: 20px 13px;
 }
-
+.quantity{
+    font-size: 20px;
+}
 .product-info p {
     color: gray;
 }
@@ -33,6 +35,7 @@
     background-color: #06c8d9;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 
 .singleP-Btn button:hover {

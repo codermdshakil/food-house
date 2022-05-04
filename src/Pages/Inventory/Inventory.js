@@ -9,7 +9,7 @@ const Inventory = () => {
 
     const { inventoryId } = useParams();
     const [singleProduct, setSinleProduct] = useState({});
-    console.log(singleProduct)
+    // console.log(singleProduct)
     const { _id, img, name, price, quantity, sold, supliername, description } = singleProduct;
 
     useEffect(() => {
@@ -21,7 +21,26 @@ const Inventory = () => {
 
     const handleDelivery = quantity => {
         const result = quantity - 1;
-        console.log(result)
+        const update = { result };
+        const url = `http://localhost:5000/products/${inventoryId}`;
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(update)
+        })
+            .then(res => res.json())
+            .then(data => {
+                const id = inventoryId;
+                const url = `http://localhost:5000/products/${id}`;
+                fetch(url)
+                .then(res => res.json())
+                .then(data => setSinleProduct(data))
+
+            })
+
+
     }
 
     return (
@@ -36,7 +55,7 @@ const Inventory = () => {
                             <div className="product-info">
                                 <h4>{name}</h4>
                                 <h5>Price: ${price}</h5>
-                                <h6>Quantity: <span className='text-danger'>{quantity}</span> </h6>
+                                <h6>Quantity: <span className='text-danger quantity'>{quantity}</span> </h6>
                                 <h6>Sold: ${sold}</h6>
                                 <h6>Id: {_id}</h6>
                                 <h6>Suplier: By <span className='text-info'>{supliername}</span></h6>
