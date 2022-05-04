@@ -4,14 +4,18 @@ import './inventory.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import usePageTitle from '../../hooks/usePageTitle';
+import { toast } from 'react-toastify';
 
 
 const Inventory = () => {
 
     const { inventoryId } = useParams();
     const [singleProduct, setSinleProduct] = useState({});
-    // console.log(singleProduct)
     const { _id, img, name, price, quantity, sold, supliername, description } = singleProduct;
+
+    
+    // tostify time control
+    const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
     useEffect(() => {
         const url = `http://localhost:5000/products/${inventoryId}`;
@@ -50,7 +54,6 @@ const Inventory = () => {
         e.preventDefault()
         const userInput = parseInt(e.target.storeQuantity.value);
         const inputValue = singleProduct.quantity + userInput;
-        console.log(inputValue)
         const reStored = { inputValue };
         const url = `http://localhost:5000/product/${inventoryId}`;
         fetch(url, {
@@ -70,9 +73,13 @@ const Inventory = () => {
             })
 
         e.target.reset();
+        toast.promise(
+            resolveAfter3Sec,
+            {
+                success:`New ${userInput} product stored`,
+            }
+        )
     }
-
-
 
     return (
         <div className='mt-5 py-5'>
@@ -81,7 +88,7 @@ const Inventory = () => {
             }
             <div className="container ">
                 <div className="row d-flex align-items-center singleWrapper">
-                    <div className="col-lg-5 col-md-8 d-block m-auto">
+                    <div className="col-lg-5 col-md-8 col-10 d-block m-auto">
                         <article className="singleProduct">
                             <div className='singleProduct-frame'>
                                 <img src={img} alt="" />
@@ -100,8 +107,8 @@ const Inventory = () => {
                             </div>
                         </article>
                     </div>
-                    <div className='col-lg-1 restored'></div>
-                    <div className="col-lg-6 col-md-6 ">
+                    <div className='col-lg-1 col-md-0  restored'></div>
+                    <div className="col-lg-6 col-md-8 d-block col-11 m-auto">
                         <div className='store-item-box'>
                             <h3>Restored Item</h3>
                             <form onSubmit={handleItemQuantityNumber}>
