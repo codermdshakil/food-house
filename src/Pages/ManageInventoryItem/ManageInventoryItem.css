@@ -6,7 +6,6 @@
     border: 1px solid lightgray;
     justify-content: space-between;
     transition: .2s ease-in;
-    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .image-frame {
-    padding: 5px;
+    padding: 10px;
 }
 
 .product-box img {
@@ -53,14 +52,13 @@
     cursor: pointer;
 }
 
-
 @media screen and (max-width:567px) {
     .products-info {
         width: 50%;
         margin-left: 5px;
     }
     .products-info h4{
-        font-size: 20px;
+        font-size: 25px;
     }
     .products-info h5{
         font-size: 16px;
