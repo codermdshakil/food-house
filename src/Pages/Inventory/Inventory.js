@@ -91,7 +91,7 @@ const Inventory = () => {
                     <div className="col-lg-5 col-md-8 col-10 d-block m-auto">
                         <article className="singleProduct mb-5" data-aos="fade-right" >
                             <div className='singleProduct-frame'>
-                                <img src={img} alt="" />
+                                <img src={img} className="img-fluid" alt="" />
                             </div>
                             <div className="product-info">
                                 <h6>Id: <span className='id-style'> {_id}</span></h6>

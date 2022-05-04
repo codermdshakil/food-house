@@ -11,7 +11,7 @@ const ManageInventoryItem = ({ products, handleProductDelete }) => {
         <div className='col-lg-6 col-md-8 col-11 d-block m-auto m-lg-0'>
             <div className='product-box' data-aos="fade-up">
                 <div className='image-frame'>
-                    <img src={img} alt="" />
+                    <img src={img}  className="img-fluid" alt="" />
                 </div>
                 <div className='products-info'>
                     <h4>{name}</h4>

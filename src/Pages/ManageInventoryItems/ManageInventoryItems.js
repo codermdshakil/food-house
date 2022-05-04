@@ -7,19 +7,19 @@ const ManageInventoryItems = () => {
     const [products, setProducts] = useStoredProducts();
 
     const handleProductDelete = id => {
-        const url = `http://localhost:5000/items/${id}`;
-        fetch(url, {
-            method: "DELETE",
-        })
-            .then(res => res.json())
-            .then(data => {
-                const confirmation = window.confirm('Are you sure to delete this item?');
-                if (confirmation) {
+        const confirmationMessage = window.confirm('Are you sure to delete this item?');
+        if (confirmationMessage) {
+            const url = `http://localhost:5000/items/${id}`;
+            fetch(url, {
+                method: "DELETE",
+            })
+                .then(res => res.json())
+                .then(data => {
                     const newProducts = products.filter(item => item._id !== id);
                     setProducts(newProducts)
-                }
+                })
+        }
 
-            })
     }
 
     return (
