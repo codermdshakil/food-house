@@ -3,24 +3,20 @@ import './ManageInventoryItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
-const ManageInventoryItem = ({ products }) => {
+const ManageInventoryItem = ({ products, handleProductDelete }) => {
 
-    const { _id , img, name, price, quantity , supliername} = products;
-
-    const handleProductDelete = id => {
-        console.log(id)
-    }
-
+    const { _id , img, name, price, quantity , supliername, sold} = products;
 
     return (
-        <div className='col-lg-6 col-md-8 col-11 d-block m-auto'>
-            <div className='product-box'>
+        <div className='col-lg-6 col-md-8 col-11 d-block m-auto m-lg-0'>
+            <div className='product-box' data-aos="fade-up">
                 <div className='image-frame'>
                     <img src={img} alt="" />
                 </div>
                 <div className='products-info'>
                     <h4>{name}</h4>
                     <h5>Price : <span className='price-style'>${price}</span></h5>
+                    <h6>Sold: {sold}</h6>
                     <h6>Quantity : <span className='text-danger'>{quantity}</span> </h6>
                     <h6>Suplier : By <span className='suplier'> {supliername}</span> </h6>
                 </div>

@@ -40,11 +40,10 @@ const Footer = () => {
                                 <article className='footer-items'>
                                     <h4 className='footer-title'>Quick Links</h4>
                                     <Link to='/home' className='link-title'>Banner</Link><br />
-                                    <Link to='/inventory-items' className='link-title'>
-                                        Inventory Items</Link><br />
                                     <Link to='/blogs' className='link-title'>Blogs</Link><br />
                                     <Link to='/signup' className='link-title'>Sign Up</Link><br />
                                     <Link to='/signin' className='link-title'>Sign In</Link><br />
+                                    <Link to='/manageinventoryitems' className='link-title'>Manage Item's</Link><br />
                                 </article>
                             </div>
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">

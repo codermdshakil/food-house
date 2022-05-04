@@ -89,7 +89,7 @@ const Inventory = () => {
             <div className="container ">
                 <div className="row d-flex align-items-center singleWrapper">
                     <div className="col-lg-5 col-md-8 col-10 d-block m-auto">
-                        <article className="singleProduct mb-5">
+                        <article className="singleProduct mb-5" data-aos="fade-right" >
                             <div className='singleProduct-frame'>
                                 <img src={img} alt="" />
                             </div>
@@ -98,7 +98,7 @@ const Inventory = () => {
                                 <h4>{name}</h4>
                                 <h5>Price: ${price}</h5>
                                 <h6>Quantity: <span className='text-danger quantity'>{quantity}</span> </h6>
-                                <h6>Sold: ${sold}</h6>
+                                <h6>Sold: {sold}</h6>
                                 <h6>Suplier: By <span className='text-info'>{supliername}</span></h6>
                                 <p>{description}</p>
                             </div>
@@ -112,8 +112,8 @@ const Inventory = () => {
                     </div>
                     <div className='col-lg-1 col-md-0  restored'></div>
                     <div className="col-lg-6 col-md-8 d-block col-11 m-auto">
-                        <div className='store-item-box'>
-                            <h3>Restored Item</h3>
+                        <div className='store-item-box' data-aos="fade-down" >
+                            <h3 style={{color:'#82cd00'}}>Restored Item</h3>
                             <form onSubmit={handleItemQuantityNumber}>
                                 <input type="number" name='storeQuantity' placeholder='Enter quantity number' required /> <br />
                                 <button>ReStored Product</button>
