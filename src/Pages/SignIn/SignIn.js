@@ -115,7 +115,7 @@ const SignIn = () => {
                     <div className="row d-flex align-items-center">
                         <div className="col-lg-6 col-md-6 col-10 my-5 my-lg-0 d-block m-auto" 
                           data-aos="fade-right">
-                            <img src={signInLogo} className="img-fluid d-block m-auto p-2" alt="" />
+                            <img src={signInLogo} className="img-fluid d-block m-auto p-3" alt="" />
                         </div>
                         <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">
                             <div className="signin-form-wrapper" data-aos="fade-left">
