@@ -11,7 +11,6 @@ const InventoryItems = () => {
 
     const [products] = useStoredProducts()
     const sixInventoryItem = products.slice(0, 6);
-    console.log(sixInventoryItem);
     return (
         <div className="container" id="inventory-items">
             <div className='py-3'>

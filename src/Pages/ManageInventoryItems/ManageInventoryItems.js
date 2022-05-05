@@ -2,6 +2,9 @@ import React from 'react';
 import useStoredProducts from '../../hooks/useStoredProducts';
 import ManageInventoryItem from '../ManageInventoryItem/ManageInventoryItem';
 import usePageTitle from '../../hooks/usePageTitle';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ManageInventoryItems = () => {
 
@@ -30,6 +33,13 @@ const ManageInventoryItems = () => {
             }
             <div className="container">
                 <h4 className='text-center py-3 mb-4'>Manage Inventory Item's <span className='text-danger'>({products.length})</span></h4>
+
+                <div>
+                    <div className='all-inventory'>
+                        <p><Link className='text-white' to="/additem"> Add New Item <FontAwesomeIcon icon={faArrowRight} /> </Link> </p>
+                    </div>
+                </div>
+
                 <div className="row">
                     {
                         products.map(items => <ManageInventoryItem key={items._id} handleProductDelete={handleProductDelete} products={items} />)
