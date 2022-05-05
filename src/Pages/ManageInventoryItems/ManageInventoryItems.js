@@ -1,6 +1,7 @@
 import React from 'react';
 import useStoredProducts from '../../hooks/useStoredProducts';
 import ManageInventoryItem from '../ManageInventoryItem/ManageInventoryItem';
+import usePageTitle from '../../hooks/usePageTitle';
 
 const ManageInventoryItems = () => {
 
@@ -24,6 +25,9 @@ const ManageInventoryItems = () => {
 
     return (
         <div className='mt-5 py-5'>
+            {
+                usePageTitle('Manage Item')
+            }
             <div className="container">
                 <h4 className='text-center py-3 mb-4'>Manage Inventory Item's <span className='text-danger'>({products.length})</span></h4>
                 <div className="row">

@@ -16,7 +16,7 @@ const InventoryItem = ({ signleItem }) => {
 
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0'>
-            <div className="item-box ">
+            <article className="item-box ">
                 <div className='item-frame'>
                     <img src={img} className="img-fluid" alt="" />
                 </div>
@@ -28,7 +28,7 @@ const InventoryItem = ({ signleItem }) => {
                     <p>{description}</p>
                     <button onClick={() => handleInventoryUpdate(_id)} > Stock Update <FontAwesomeIcon icon={faArrowAltCircleUp} /> </button>
                 </div>
-            </div>
+            </article>
         </div>
     );
 };

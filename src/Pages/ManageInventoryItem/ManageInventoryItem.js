@@ -9,7 +9,7 @@ const ManageInventoryItem = ({ products, handleProductDelete }) => {
 
     return (
         <div className='col-lg-6 col-md-8 col-11 d-block m-auto m-lg-0'>
-            <div className='product-box' data-aos="fade-up">
+            <article className='product-box' data-aos="fade-up">
                 <div className='image-frame'>
                     <img src={img}  className="img-fluid" alt="" />
                 </div>
@@ -23,7 +23,7 @@ const ManageInventoryItem = ({ products, handleProductDelete }) => {
                 <div>
                     <button onClick={() => handleProductDelete(_id)} className='delete-area'><FontAwesomeIcon icon={faTrashCan} /></button>
                 </div>
-            </div>
+            </article>
         </div>
     );
 };

@@ -112,13 +112,13 @@ const Inventory = () => {
                     </div>
                     <div className='col-lg-1 col-md-0  restored'></div>
                     <div className="col-lg-6 col-md-8 d-block col-11 m-auto">
-                        <div className='store-item-box' data-aos="fade-down" >
+                        <article className='store-item-box' data-aos="fade-down" >
                             <h3 style={{color:'#82cd00'}}>Restored Item</h3>
                             <form onSubmit={handleItemQuantityNumber}>
                                 <input type="number" name='storeQuantity' placeholder='Enter quantity number' required /> <br />
                                 <button>ReStored Product</button>
                             </form>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
