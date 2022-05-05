@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 const InventoryItem = ({ signleItem }) => {
     const { _id, img, name, price, quantity, supliername, description } = signleItem;
-    console.log(quantity)
     const navigate = useNavigate();
 
     const handleInventoryUpdate = (id) => {

@@ -83,7 +83,6 @@ const SignUp = () => {
             createUserWithEmailAndPassword(email, password)
             setFirstError('');
             setSecoudError('');
-            // toast(`${name} Sent Email`)
             toast.promise(
                 resolveAfter3Sec,
                 {
