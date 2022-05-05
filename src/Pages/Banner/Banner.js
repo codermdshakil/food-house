@@ -10,7 +10,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = () => {
     return (
-        <div className='banner-wrapper' id="home">
+        <div className='banner-wrapper' id="banner">
             <Swiper
                 pagination={{
                     type: "fraction",

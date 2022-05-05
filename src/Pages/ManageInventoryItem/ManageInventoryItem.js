@@ -13,12 +13,12 @@ const ManageInventoryItem = ({ products, handleProductDelete }) => {
                 <div className='image-frame'>
                     <img src={img}  className="img-fluid" alt="" />
                 </div>
-                <div className='products-info'>
+                <div className='products-info mt-3'>
                     <h4>{name}</h4>
                     <h5>Price : <span className='price-style'>${price}</span></h5>
                     <h6>Sold: {sold}</h6>
                     <h6>Quantity : <span className='text-danger'>{quantity}</span> </h6>
-                    <h6>Suplier : By <span className='suplier'> {supliername}</span> </h6>
+                    <h6 className='d-flex'>Suplier : By <span className='suplier ms-2'> {supliername}</span> </h6>
                 </div>
                 <div>
                     <button onClick={() => handleProductDelete(_id)} className='delete-area'><FontAwesomeIcon icon={faTrashCan} /></button>
