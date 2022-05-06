@@ -27,7 +27,7 @@ const SignUp = () => {
 
 
     // react firebase hooks
-    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [user, loadingUser] = useAuthState(auth)
     console.log(user)
 
@@ -86,7 +86,7 @@ const SignUp = () => {
             toast.promise(
                 resolveAfter3Sec,
                 {
-                  success: `${name} Sent Email`,
+                    success: `${name} Sent Email`,
                 }
             )
 

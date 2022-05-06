@@ -41,7 +41,7 @@ const QuestionAndAns = () => {
                                 <Accordion.Item eventKey="3">
                                     <Accordion.Header>4. What is the purpose of jwt and how does it work?</Accordion.Header>
                                     <Accordion.Body>
-                                    JSON Web Token or <b>JWT</b> is an open standard used to share security information between two parties a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.The application or client requests authorization to the authorization server.When the authorization is granted, the authorization server returns an access token to the application.The application uses the access token to access a protected resource (like an API).
+                                        JSON Web Token or <b>JWT</b> is an open standard used to share security information between two parties a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.The application or client requests authorization to the authorization server.When the authorization is granted, the authorization server returns an access token to the application.The application uses the access token to access a protected resource (like an API).
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>

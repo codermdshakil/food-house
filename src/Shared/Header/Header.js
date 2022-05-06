@@ -26,6 +26,7 @@ const Header = () => {
     if (loading) {
         return <LoadingSpinner></LoadingSpinner>
     }
+    
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" fixed="top" className='header-section' variant="light">
             <Container>

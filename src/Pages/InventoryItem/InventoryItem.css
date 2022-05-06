@@ -5,16 +5,20 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: .4s ease-in;
 }
-.item-frames{
+
+.item-frames {
     overflow: hidden;
 }
-.item-box:hover.item-box img{
+
+.item-box:hover.item-box img {
     border-radius: 10px;
     transform: scale(1.06);
 }
-.item-box:hover .item-box img{
+
+.item-box:hover .item-box img {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
+
 .item-box p {
     color: gray;
     font-size: 16px;
@@ -35,7 +39,8 @@
     color: #ff3030;
     ;
 }
-.suplier-name{
+
+.suplier-name {
     margin-bottom: -12px;
 }
 
@@ -55,7 +60,7 @@
     font-size: 15px;
     transition: all .5s ease;
     margin-bottom: 20px;
-    box-shadow:  0px 8px 24px rgba(0, 0, 0, 0.366);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.366);
 }
 
 .item-info button:hover {

@@ -30,9 +30,11 @@
 .products-info h4 {
     font-size: 20px;
 }
-.products-info h5{
+
+.products-info h5 {
     font-size: 18px;
 }
+
 .price-style {
     color: #82cd00;
 }
@@ -57,13 +59,16 @@
         width: 50%;
         margin-left: 5px;
     }
-    .products-info h4{
+
+    .products-info h4 {
         font-size: 25px;
     }
-    .products-info h5{
+
+    .products-info h5 {
         font-size: 16px;
     }
-    .products-info h4{
+
+    .products-info h4 {
         font-size: 14px;
     }
 }

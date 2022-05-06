@@ -25,7 +25,7 @@ const SignIn = () => {
     const location = useLocation();
 
     // react firebase hooks 
-    const [ , loadingUpdate] = useAuthState(auth);
+    const [, loadingUpdate] = useAuthState(auth);
     const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const [signInWithGoogle, , loadingGoogle] = useSignInWithGoogle(auth);
@@ -56,7 +56,7 @@ const SignIn = () => {
         e.preventDefault()
         await signInWithEmailAndPassword(email, password);
 
-        const { data } = await axios.post('http://localhost:5000/gettoken', { email });
+        const { data } = await axios.post('https://calm-waters-38040.herokuapp.com/gettoken', { email });
         localStorage.setItem('token', data.token);
         navigate(from, { replace: true });
         e.target.reset();

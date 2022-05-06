@@ -63,11 +63,12 @@
     color: #4092c1;
 }
 
-.error-style{
-    background-color:#ffc0cb;
+.error-style {
+    background-color: #ffc0cb;
     color: #cb3439;
     border-radius: 4px;
 }
+
 /* media queries  */
 
 /* medium device */

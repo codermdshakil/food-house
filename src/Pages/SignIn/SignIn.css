@@ -1,5 +1,4 @@
-
-.signin-form-wrapper{
+.signin-form-wrapper {
     background-image: url(../../images/bg.png);
     background-repeat: no-repeat;
     background-position: top center;
@@ -9,61 +8,73 @@
     border-radius: 20px;
     margin-bottom: 50px;
 }
-.or-style{
+
+.or-style {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.first-line{
+
+.first-line {
     width: 150px;
     height: 2px;
-    background-color:rgba(170, 168, 168, 0.601);
+    background-color: rgba(170, 168, 168, 0.601);
 }
-.secound-or{
+
+.secound-or {
     font-size: 22px;
     color: gray;
 }
-.third-line{
+
+.third-line {
     width: 150px;
     height: 2px;
-    background-color:rgba(170, 168, 168, 0.601);
+    background-color: rgba(170, 168, 168, 0.601);
 }
-.google_btn{
+
+.google_btn {
     width: 100%;
     padding: 8px;
     margin-top: 10px;
-    border:none;
+    border: none;
     background-color: #fff;
     border-radius: 25px;
     cursor: pointer;
     transition: .3s ease-in;
     box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
-.google_btn:hover{
+
+.google_btn:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 /* media quiries  */
 
 /* medium device  */
 @media screen and (max-width:1024px) {
-    .first-line{
+    .first-line {
         width: 80px;
     }
-    .third-line{
+
+    .third-line {
         width: 80px;
     }
-    .signin-form-wrapper{
+
+    .signin-form-wrapper {
         height: 650px;
     }
 }
+
 @media screen and (max-width:567px) {
-    .first-line{
+    .first-line {
         width: 100px;
     }
-    .third-line{
+
+    .third-line {
         width: 100px;
     }
-    .signin-form-wrapper{
+
+    .signin-form-wrapper {
         height: 650px;
     }
 }

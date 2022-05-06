@@ -1,15 +1,12 @@
 import React from 'react';
 import './MyItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 
-const MyItem = ({ item , handleMyitemDelete}) => {
+const MyItem = ({ item, handleMyitemDelete }) => {
 
-    const {_id, name, img, price, email, quantity, sold, supliername, description } = item;
-
-
-
+    const { _id, name, img, price, email, quantity, sold, supliername, description } = item;
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0'>
             <article className="my-item-box" data-aos="fade-up">

@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="footer-wrapper">
                         <div className="row">
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <article className='footer-items' data-aos="fade-right">
+                                <article className='footer-items' data-aos="fade-up">
                                     <div className='d-flex align-items-center'>
                                         <h3 className='title'>FOOD</h3><h3 style={{ color: 'white' }}>HOUSE</h3>
                                     </div>
@@ -59,7 +59,7 @@ const Footer = () => {
                                 </article>
                             </div>
                             <div className="col-lg-3 col-md-6 col-10 d-block m-auto m-md-0">
-                                <article className='footer-items' data-aos="fade-left">
+                                <article className='footer-items' data-aos="fade-up">
                                     <h4 className='footer-title'>NewsLetter</h4>
                                     <div className='subscribe'>
                                         <input type="text" name='email' placeholder='E-mail' required />
@@ -70,7 +70,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <p className='text-center pt-5 px-4 developer' data-aos="fade-right">&copy; CopyRight Reserved <span><span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </span> </p>
+                    <p className='text-center pt-5 px-4 developer' data-aos="fade-down">&copy; CopyRight Reserved <span><span className='developer-name'>Md. Shakil Ahmed</span> | Programming hero Learner - {year} </span> </p>
                 </div>
             </div>
         </div>

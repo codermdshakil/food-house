@@ -5,10 +5,10 @@ const LatestNews = () => {
 
     const [allNews, setAllNews] = useState([]);
 
-    useEffect( () => {
+    useEffect(() => {
         fetch('https://calm-waters-38040.herokuapp.com/news')
-        .then(res => res.json())
-        .then(data => setAllNews(data))
+            .then(res => res.json())
+            .then(data => setAllNews(data))
     }, [])
 
 

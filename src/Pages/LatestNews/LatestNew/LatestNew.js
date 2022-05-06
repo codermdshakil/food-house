@@ -4,9 +4,9 @@ import React from 'react';
 import '../LatestNew.css';
 
 
-const LatestNew = ({news}) => {
+const LatestNew = ({ news }) => {
 
-    const {img, des, dates, comment, suplierImg, suplierName } = news;
+    const { img, des, dates, comment, suplierImg, suplierName } = news;
 
     return (
         <div className="col-lg-4 col-md-6 col-10 d-block m-auto m-md-0">

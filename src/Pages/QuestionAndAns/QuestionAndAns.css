@@ -1,6 +1,7 @@
-.accordion-button{
+.accordion-button {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.accordion-button:active{
+
+.accordion-button:active {
     border-radius: 50px;
 }

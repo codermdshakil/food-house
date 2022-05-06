@@ -9,7 +9,7 @@ const NotFound = () => {
         <div>
             <div className="container">
                 <div className="img-frame">
-                    <img src={notFoundImg}   alt="" />
+                    <img src={notFoundImg} alt="" />
                 </div>
             </div>
         </div>

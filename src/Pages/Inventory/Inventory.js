@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './inventory.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import usePageTitle from '../../hooks/usePageTitle';
 import { toast } from 'react-toastify';
 
@@ -89,7 +89,7 @@ const Inventory = () => {
             <div className="container ">
                 <div className="row d-flex align-items-center singleWrapper">
                     <div className="col-lg-5 col-md-8 col-10 d-block m-auto">
-                        <article className="singleProduct mb-5" data-aos="fade-right" >
+                        <article className="singleProduct mb-5" data-aos="fade-up" >
                             <div className='singleProduct-frame'>
                                 <img src={img} className="img-fluid" alt="" />
                             </div>
@@ -113,7 +113,7 @@ const Inventory = () => {
                     <div className='col-lg-1 col-md-0  restored'></div>
                     <div className="col-lg-6 col-md-8 d-block col-11 m-auto">
                         <article className='store-item-box' data-aos="fade-down" >
-                            <h3 style={{color:'#82cd00'}}>Restored Item</h3>
+                            <h3 style={{ color: '#82cd00' }}>Restored Item</h3>
                             <form onSubmit={handleItemQuantityNumber}>
                                 <input type="number" name='storeQuantity' placeholder='Enter quantity number' required /> <br />
                                 <button>ReStored Product</button>
