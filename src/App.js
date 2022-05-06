@@ -17,6 +17,7 @@ import RequireAuth from './Shared/RequireAuth/RequireAuth';
 import ManageInventoryItems from './Pages/ManageInventoryItems/ManageInventoryItems';
 import AddItem from './Pages/AddItem/AddItem';
 import QuestionAndAns from './Pages/QuestionAndAns/QuestionAndAns';
+import MyItems from './Pages/MyItems/MyItems';
 
 AOS.init();
 
@@ -40,6 +41,11 @@ function App() {
         <Route path='/additem' element={
           <RequireAuth>
             <AddItem />
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItems/>
           </RequireAuth>
         }></Route>
         <Route path='/blogs' element={<QuestionAndAns/>}></Route>

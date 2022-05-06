@@ -39,10 +39,11 @@ const Header = () => {
                     <Nav className="ms-auto d-flex align-items-center">
                         <Nav.Link as={Link} to="home">Banner</Nav.Link>
                         <Nav.Link href="home#inventory-items">Inventory Item's</Nav.Link>
-                        <Nav.Link href="home#testimonial">Review</Nav.Link>
+                        <Nav.Link href="home#testimonial">Testimonial</Nav.Link>
                         <Nav.Link href="home#footer">Footer</Nav.Link>
                         {user?.uid ? <Nav.Link as={Link} to="manageinventoryitems">Manage Item's</Nav.Link> : ""}
                         {user?.uid ? <Nav.Link as={Link} to="additem">Add Item</Nav.Link> : ""}
+                        {user?.uid ? <Nav.Link as={Link} to="myitems">My Items</Nav.Link> : ""}
                         <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                         {user?.uid ? <button onClick={handleSignOut} className='logout-btn'>Sign Out <FontAwesomeIcon icon={faSignOut} /> </button> : <Nav.Link as={Link} to='signin'>Sign In</Nav.Link>}
                     </Nav>
