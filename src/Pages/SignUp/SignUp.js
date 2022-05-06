@@ -35,7 +35,7 @@ const SignUp = () => {
 
 
     if (user) {
-        navigate('/')
+        navigate('/home')
     }
 
     if (loading1 || loadingUser) {

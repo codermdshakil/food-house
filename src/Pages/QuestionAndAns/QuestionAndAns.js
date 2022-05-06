@@ -18,7 +18,7 @@ const QuestionAndAns = () => {
                 <h2 className='text-center py-2 '> <span style={{ color: 'red', fontWeight: 'bold' }}>Q</span>uestions and <span style={{ color: '#82cd00', fontWeight: 'bold' }}>A</span>nswers</h2>
                 <div className="row d-flex align-items-center py-3">
                     <div className="col-lg-6 col-md-6 col-11 d-block m-auto">
-                        <div className="accorddion">
+                        <div className="accorddion" >
                             <Accordion>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>1. What is the Difference between javascript and nodejs ?</Accordion.Header>
@@ -49,7 +49,7 @@ const QuestionAndAns = () => {
                     </div>
                     <div className="col-lg-6 col-md-6 col-11 d-block m-auto order-first order-md-last">
                         <div className="question-img-frame">
-                            <img src={questionImg} className="img-fluid w-100 mb-3" alt="" />
+                            <img src={questionImg} className="img-fluid d-block m-auto w-100 mb-3" alt="" />
                         </div>
                     </div>
                 </div>

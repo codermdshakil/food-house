@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import useStoredProducts from '../../hooks/useStoredProducts';
 import MyItem from '../MyItem/MyItem';
 import usePageTitle from '../../hooks/usePageTitle';
 import { useAuthState } from 'react-firebase-hooks/auth';

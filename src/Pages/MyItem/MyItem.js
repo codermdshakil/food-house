@@ -12,7 +12,7 @@ const MyItem = ({ item , handleMyitemDelete}) => {
 
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0'>
-            <div className="my-item-box">
+            <article className="my-item-box" data-aos="fade-up">
                 <div className="item-frame">
                     <img src={img} className="img-fluid" alt="" />
                 </div>
@@ -29,7 +29,7 @@ const MyItem = ({ item , handleMyitemDelete}) => {
                 <div>
                     <button className='item-delete-btn' onClick={() => handleMyitemDelete(_id)}>Delete Item <FontAwesomeIcon icon={faTrashCan} /></button>
                 </div>
-            </div>
+            </article>
         </div>
     );
 };

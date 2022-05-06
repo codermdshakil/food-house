@@ -10,7 +10,7 @@ const LatestNew = ({news}) => {
 
     return (
         <div className="col-lg-4 col-md-6 col-10 d-block m-auto m-md-0">
-            <div className="news-box">
+            <div className="news-box" data-aos="fade-up">
                 <div className="new-image">
                     <img src={img} className="img-fluid" alt="" />
                 </div>

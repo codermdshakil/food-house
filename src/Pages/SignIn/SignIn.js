@@ -36,7 +36,7 @@ const SignIn = () => {
     const from = location.state?.from?.pathname || "/";
 
     if (user) {
-        navigate('/');
+        navigate('/home');
     }
 
     if (user) {
