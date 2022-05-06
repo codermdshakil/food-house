@@ -16,7 +16,7 @@ const Banner = () => {
                     type: "fraction",
                 }}
                 autoplay={{
-                    delay: 4000,
+                    delay: 5000,
                     disableOnInteraction: false,
                   }}
                 navigation={true}
