@@ -36,7 +36,7 @@ const AddItem = () => {
         console.log(newItem)
      
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://calm-waters-38040.herokuapp.com/products', {
             method:"POST",
             headers:{
                 "content-type":"application/json"

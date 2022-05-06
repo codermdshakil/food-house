@@ -18,7 +18,7 @@ const Inventory = () => {
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${inventoryId}`;
+        const url = `https://calm-waters-38040.herokuapp.com/products/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSinleProduct(data))
@@ -27,7 +27,7 @@ const Inventory = () => {
     const handleDelivery = quantity => {
         const result = quantity - 1;
         const update = { result };
-        const url = `http://localhost:5000/products/${inventoryId}`;
+        const url = `https://calm-waters-38040.herokuapp.com/products/${inventoryId}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -38,7 +38,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 const id = inventoryId;
-                const url = `http://localhost:5000/products/${id}`;
+                const url = `https://calm-waters-38040.herokuapp.com/products/${id}`;
                 fetch(url)
                     .then(res => res.json())
                     .then(data => setSinleProduct(data))
@@ -55,7 +55,7 @@ const Inventory = () => {
         const userInput = parseInt(e.target.storeQuantity.value);
         const inputValue = singleProduct.quantity + userInput;
         const reStored = { inputValue };
-        const url = `http://localhost:5000/product/${inventoryId}`;
+        const url = `https://calm-waters-38040.herokuapp.com/product/${inventoryId}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -66,7 +66,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 const id = inventoryId;
-                const url = `http://localhost:5000/products/${id}`;
+                const url = `https://calm-waters-38040.herokuapp.com/products/${id}`;
                 fetch(url)
                     .then(res => res.json())
                     .then(data => setSinleProduct(data))
