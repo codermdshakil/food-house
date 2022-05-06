@@ -41,8 +41,8 @@
     color: #fff;
     padding: 16px 15px;
     transition: .3s ease-in;
-    border: 1px solid #06c8d9;
-    background-color: #06c8d9;
+    border: 1px solid hsl(261deg 80% 48%);
+    background-color: hsl(261deg 80% 48%);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
@@ -50,7 +50,7 @@
 
 .singleP-Btn button:hover {
     background-color: #fff;
-    color: #06c8d9;
+    color: hsl(261deg 80% 48%);
 }
 
 .store-item-box {
