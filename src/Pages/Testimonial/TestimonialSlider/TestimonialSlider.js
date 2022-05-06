@@ -129,7 +129,7 @@ const TestimonialSlider = () => {
                                 <div className='d-flex align-items-center '>
                                     <p style={{ color: 'orange' }}> <FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStarHalfAlt} /> <span style={{ color: 'black' }}>4.9</span> </p>
                                 </div>
-                                <h5>I love this website and services</h5>
+                                <h5>I love this website</h5>
                                 <p>This is really a good website and there services and food quiality is best , fruits always need and clean.</p>
                             </div>
                         </div>

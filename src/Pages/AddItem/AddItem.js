@@ -49,7 +49,7 @@ const AddItem = () => {
         toast.promise(
             resolveAfter3Sec,
             {
-              success: `${name} item added`,
+              success: `New ${name} item added`,
             }
         )
     }
