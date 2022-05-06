@@ -4,7 +4,6 @@ import LatestNew from './LatestNew/LatestNew';
 const LatestNews = () => {
 
     const [allNews, setAllNews] = useState([]);
-    console.log(allNews)
 
     useEffect( () => {
         fetch('https://calm-waters-38040.herokuapp.com/news')

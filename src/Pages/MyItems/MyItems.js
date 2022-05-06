@@ -2,12 +2,19 @@ import React from 'react';
 import useStoredProducts from '../../hooks/useStoredProducts';
 import MyItem from '../MyItem/MyItem';
 import usePageTitle  from '../../hooks/usePageTitle';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const MyItems = () => {
 
+    const [user] = useAuthState(auth);
+    console.log(user)
+
+    
     const [products, setProducts] = useStoredProducts()
     const myItems = products.filter(item => item.email);
 
+    
     const handleMyitemDelete = id => {
         const confirmationMessage = window.confirm('Are you sure to delete this item?');
         if (confirmationMessage) {
@@ -22,6 +29,7 @@ const MyItems = () => {
                 })
         }
     }
+
 
     return (
         <div className='mt-5 pt-5'>
