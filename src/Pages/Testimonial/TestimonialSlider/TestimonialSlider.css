@@ -1,0 +1,30 @@
+.swiper-pagination-bullets {
+    background: #f3f3f5;
+}
+
+.box {
+    margin-bottom: 30px;
+    background-color: #f3f3f5;
+}
+
+.review-box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+/* .row{
+
+} */
+.client-info {
+    margin-bottom: 10px;
+}
+
+.client-info img {
+    width: 80px;
+}
+
+.client-name {
+    margin-left: 20px;
+}
