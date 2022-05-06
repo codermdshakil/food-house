@@ -9,10 +9,11 @@ import githubLogo from '../../images/GitHub.png';
 import './SignIn.css';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useAuthState, useSendPasswordResetEmail, useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
-import { useNavigate , useLocation} from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import { toast } from 'react-toastify';
 import PageTitle from '../../hooks/usePageTitle';
+import axios from 'axios';
 
 
 
@@ -24,7 +25,7 @@ const SignIn = () => {
     const location = useLocation();
 
     // react firebase hooks 
-    const [user, loadingUpdate] = useAuthState(auth);
+    const [ , loadingUpdate] = useAuthState(auth);
     const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const [signInWithGoogle, , loadingGoogle] = useSignInWithGoogle(auth);
@@ -34,14 +35,6 @@ const SignIn = () => {
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
     const from = location.state?.from?.pathname || "/";
-
-    if (user) {
-        navigate('/home');
-    }
-
-    if (user) {
-        navigate(from, { replace: true });
-    }
 
     if (loadingUpdate || loadingSignIn || sending || loadingGoogle || loading) {
         return <LoadingSpinner />
@@ -59,11 +52,14 @@ const SignIn = () => {
     }
 
     // handle user sign in
-    const hanleUserSignIn = e => {
+    const hanleUserSignIn = async e => {
         e.preventDefault()
-        signInWithEmailAndPassword(email, password);
-        e.target.reset();
+        await signInWithEmailAndPassword(email, password);
 
+        const { data } = await axios.post('http://localhost:5000/gettoken', { email });
+        localStorage.setItem('token', data.token);
+        navigate(from, { replace: true });
+        e.target.reset();
     }
 
     // handle user password reset 
@@ -110,11 +106,11 @@ const SignIn = () => {
             {
                 PageTitle('Sign In')
             }
-            <div className='mt-5 pt-5' style={{marginTop:'20px'}}>
+            <div className='mt-5 pt-5' style={{ marginTop: '20px' }}>
                 <div className="container">
                     <div className="row d-flex align-items-center">
-                        <div className="col-lg-6 col-md-6 col-10 my-5 my-lg-0 d-block m-auto" 
-                          data-aos="fade-right">
+                        <div className="col-lg-6 col-md-6 col-10 my-5 my-lg-0 d-block m-auto"
+                            data-aos="fade-right">
                             <img src={signInLogo} className="img-fluid d-block m-auto p-3" alt="" />
                         </div>
                         <div className="col-lg-6 col-md-6 col-11 m-2 d-block m-auto text-center">

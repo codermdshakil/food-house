@@ -7,15 +7,17 @@ import auth from '../../firebase.init';
 const MyItems = () => {
 
     const [user] = useAuthState(auth);
-
-    const [allMyItems, setAllMyItems] = useState([]);
-
+    const [allMyItems, setAllMyItems] = useState([]); 
     useEffect(() => {
         const email = user.email;
         const url = `https://calm-waters-38040.herokuapp.com/myitems?email=${email}`;
-        fetch(url)
+        fetch(url, {
+            headers:{
+                authorization:`Bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
-            .then(data => setAllMyItems(data))
+            .then(data => setAllMyItems(data)) 
     }, [user])
 
 
