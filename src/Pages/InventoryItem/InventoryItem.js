@@ -23,7 +23,7 @@ const InventoryItem = ({ signleItem }) => {
                     <h4>{name}</h4>
                     <h6>Price : ${price}</h6>
                     <h6>Quantity : <span className='quantity-style'>{quantity}</span></h6>
-                    <h6 className='d-flex '> Suplier: <span className='text-muted ms-1'> By </span> <span className='suplier ms-1'> {supliername}</span> </h6>
+                    <h6 className='d-flex suplier-name'> Suplier: <span className='text-muted ms-1'> By </span> <span className='suplier ms-1'> {supliername}</span> </h6>
                     <p>{description}</p>
                     <button onClick={() => handleInventoryUpdate(_id)} > Stock Update <FontAwesomeIcon icon={faArrowAltCircleUp} /> </button>
                 </div>

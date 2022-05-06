@@ -103,7 +103,7 @@ const Inventory = () => {
                                 <p>{description}</p>
                             </div>
                             <div className='singleP-Btn'>
-                                <button onClick={() => handleDelivery(quantity)} > Deliverd  <FontAwesomeIcon icon={faPaperPlane} /> </button>
+                                <button onClick={() => handleDelivery(quantity)} > Delivered  <FontAwesomeIcon icon={faPaperPlane} /> </button>
                             </div>
                         </article>
                         <div className='all-inventory'>
