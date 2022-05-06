@@ -2,6 +2,8 @@ import React from 'react';
 import './QuestionAndAns.css';
 import questionImg from '../../images/questionans.gif';
 import { Accordion, } from 'react-bootstrap'
+import usePageTitle from '../../hooks/usePageTitle';
+
 
 
 
@@ -9,6 +11,9 @@ import { Accordion, } from 'react-bootstrap'
 const QuestionAndAns = () => {
     return (
         <div className='mt-5 pt-5'>
+            {
+                usePageTitle('Blogs')
+            }
             <div className="container">
                 <h2 className='text-center py-2 '> <span style={{ color: 'red', fontWeight: 'bold' }}>Q</span>uestions and <span style={{ color: '#82cd00', fontWeight: 'bold' }}>A</span>nswers</h2>
                 <div className="row d-flex align-items-center py-3">

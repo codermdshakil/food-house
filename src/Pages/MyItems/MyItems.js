@@ -1,6 +1,7 @@
 import React from 'react';
 import useStoredProducts from '../../hooks/useStoredProducts';
 import MyItem from '../MyItem/MyItem';
+import usePageTitle  from '../../hooks/usePageTitle';
 
 const MyItems = () => {
 
@@ -24,6 +25,9 @@ const MyItems = () => {
 
     return (
         <div className='mt-5 pt-5'>
+            {
+                usePageTitle('My Items')
+            }
             <div className="container">
                 <h3 className='text-center py-3 mb-3'>My Item's <span style={{ color: 'red' }}>({myItems.length})</span>  </h3>
                 <div className="row">
