@@ -15,8 +15,8 @@ const InventoryItem = ({ signleItem }) => {
 
     return (
         <div className='col-lg-4 col-md-6 col-10 d-block m-auto m-md-0'>
-            <article className="item-box ">
-                <div className='item-frame'>
+            <article className="item-box">
+                <div className='item-frames'>
                     <img src={img} className="img-fluid" alt="" />
                 </div>
                 <div className="item-info mt-3 px-2">
