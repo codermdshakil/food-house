@@ -30,7 +30,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="light" fixed="top" className='header-section' variant="light">
             <Container>
                 <Navbar.Brand as={Link} to="/">
-                    <div className='d-flex align-items-center'>
+                    <div className='d-flex align-items-center mt-2'>
                         <h3 className='title'>FOOD</h3><h3>HOUSE</h3>
                     </div>
                 </Navbar.Brand>
