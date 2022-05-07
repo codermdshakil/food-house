@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import MyItem from '../MyItem/MyItem';
-import usePageTitle from '../../hooks/usePageTitle';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useNavigate} from 'react-router-dom';
@@ -15,13 +14,11 @@ const MyItems = () => {
     const [allMyItems, setAllMyItems] = useState([]);
     const navigate = useNavigate();
 
-
-
     useEffect(() => {
 
         const getallMyItems = async() => {
             const email = user?.email;
-            const url = `http://localhost:5000/myitems?email=${email}`;
+            const url = `https://calm-waters-38040.herokuapp.com/myitems?email=${email}`;
             try{
                 const {data} = await axiosSecret.get(url)
                 setAllMyItems(data)
