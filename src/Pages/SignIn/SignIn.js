@@ -14,6 +14,7 @@ import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import { toast } from 'react-toastify';
 import PageTitle from '../../hooks/usePageTitle';
 import axios from 'axios';
+import useJwtToken from '../../hooks/useJwtToken';
 
 
 
@@ -26,10 +27,13 @@ const SignIn = () => {
 
     // react firebase hooks 
     const [, loadingUpdate] = useAuthState(auth);
-    const [signInWithEmailAndPassword, , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword,user , loadingSignIn, errorSignIn] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    const [signInWithGoogle, , loadingGoogle] = useSignInWithGoogle(auth);
-    const [signInWithGithub, , loading] = useSignInWithGithub(auth);
+    const [signInWithGoogle, user1, loadingGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGithub, user2 , loading] = useSignInWithGithub(auth);
+
+    // const [token] = useJwtToken(u)
+    const [token] = useJwtToken(user || user1 || user2);
 
 
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
@@ -38,6 +42,10 @@ const SignIn = () => {
 
     if (loadingUpdate || loadingSignIn || sending || loadingGoogle || loading) {
         return <LoadingSpinner />
+    }
+
+    if(token){
+        navigate(from, { replace: true });
     }
 
     // handle User Email 
@@ -54,9 +62,6 @@ const SignIn = () => {
     const hanleUserSignIn = async e => {
         e.preventDefault()
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://calm-waters-38040.herokuapp.com/gettoken', { email });
-        localStorage.setItem('token', data.token);
-        navigate(from, { replace: true });
         e.target.reset();
     }
 

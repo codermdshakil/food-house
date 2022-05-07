@@ -11,6 +11,7 @@ import { useCreateUserWithEmailAndPassword, useAuthState } from 'react-firebase-
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import PageTitle from '../../hooks/usePageTitle';
+import useJwtToken from '../../hooks/useJwtToken';
 
 
 
@@ -27,14 +28,15 @@ const SignUp = () => {
 
 
     // react firebase hooks
-    const [createUserWithEmailAndPassword, loading1] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [user, loadingUser] = useAuthState(auth)
-    console.log(user)
+    const [createUserWithEmailAndPassword, user, loading1] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [ , loadingUser] = useAuthState(auth);
+    const [token] = useJwtToken(user)
+
 
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve));
 
 
-    if (user) {
+    if (token) {
         navigate('/home')
     }
 
@@ -66,6 +68,7 @@ const SignUp = () => {
 
     // handle user sign up from 
     const handleUserSignUp = e => {
+
         e.preventDefault();
         if (password !== confirmPassword) {
             setFirstError('Your two password is not match!');
@@ -91,7 +94,9 @@ const SignUp = () => {
             )
 
         }
+
         e.target.reset();
+
     }
 
     return (

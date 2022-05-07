@@ -26,7 +26,6 @@ const MyItems = () => {
             catch (error){
                 console.log(error)
                 if(error.message || error.response.status === 401 || error.response.status === 401){
-                    console.log('hello world')
                     signOut(auth)
                     navigate('/signin')
                 }
@@ -59,9 +58,6 @@ const MyItems = () => {
 
     return (
         <div className='mt-5 pt-5'>
-            {/* {
-                usePageTitle('My Items')
-            }        */}
             <div className="container">
                 <h3 className='text-center py-3 mb-3'>My Item's <span style={{ color: 'red' }}>({allMyItems.length})</span>  </h3>
                 <div className="row">
