@@ -40,7 +40,6 @@ const SignIn = () => {
         return <LoadingSpinner />
     }
 
-
     // handle User Email 
     const hanleUserEmail = e => {
         setEmail(e.target.value)
@@ -55,7 +54,6 @@ const SignIn = () => {
     const hanleUserSignIn = async e => {
         e.preventDefault()
         await signInWithEmailAndPassword(email, password);
-
         const { data } = await axios.post('https://calm-waters-38040.herokuapp.com/gettoken', { email });
         localStorage.setItem('token', data.token);
         navigate(from, { replace: true });
