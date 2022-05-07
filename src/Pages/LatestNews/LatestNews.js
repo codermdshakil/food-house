@@ -14,7 +14,7 @@ const LatestNews = () => {
 
 
     return (
-        <div className='news-wrapper'>
+        <div className='news-wrapper' id='news'>
             <div className="container">
                 <div className='py-3'>
                     <p className='feature-title mt-5'>Popular News</p>

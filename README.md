@@ -2,8 +2,12 @@
 # FOODHouse
 
 FoodHouse Website Link : [FoodHouse](https://food-warehouse-6436d.web.app/).
+FoodHouse Server Link: [FoodHouse Server](https://calm-waters-38040.herokuapp.com/).
 
-## Description about FoodHouse website
+### Description about FoodHouse website:
+This is food store website . user can Registration and login this website and he/ she can store fruits item and delete item. If logined user add item `My Items` route show just logined user added item. User can manage any item.
+
+## What I'm use to build FoodHouse website:
 - This website name is FoodHouse. In This website you can stored food and deliverd food.
 - In this website user can Registration and login if user don't login or registraion user can't deliverd and store food in this website.
 - To Responsive for all  like device laptop, tablate , mobile this website I'm, use `React-Bootstrap`.
